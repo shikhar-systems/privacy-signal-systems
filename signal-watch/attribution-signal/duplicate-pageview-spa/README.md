@@ -23,11 +23,29 @@ This issue was observed in Single Page Applications where route changes triggere
 
 ## 🧠 Observed Context
 
-I encountered this during implementation audits for ecommerce SPAs using React and Vue, where pageview tracking was attached to `historyChange` but not properly de-duplicated.
+This was encountered during implementation audits for ecommerce SPAs using React and Vue,  
+where `page_view` tracking was attached to router events like `historyChange` or `popState`  
+without logic to prevent duplicate firing.
+
+---
+
+## 🧩 Suspected Root Cause
+
+Pageview event is bound to SPA router changes (`historyChange` or `popState`) without deduplication.  
+There is no check for:
+- Same path as previous view
+- Already-fired flag
+- Elapsed minimum time
+
+This is common in setups using built-in GA4 tag templates in GTM without custom debounce control.
 
 ---
 
 ## ⏳ RCA Potential
 
-This is now tracked for RCA escalation under:
+This is now tracked for RCA escalation under:  
 📁 `/use-cases/ecommerce/gtm-ga4-signal-break/duplicate-pageview-spa/`
+
+---
+
+> “One click. Two pageviews. Zero trust in your session data.”
