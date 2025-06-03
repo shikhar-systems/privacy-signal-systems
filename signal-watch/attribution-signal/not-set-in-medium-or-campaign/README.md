@@ -1,34 +1,45 @@
 # 🎯 `not set` in Medium or Campaign (GA4/GTM)
 
-This is one of the most common attribution bugs that we observed across multiple digital products during previous roles.
+This is one of the most common attribution bugs observed across ecommerce and digital platforms — and it silently destroys campaign ROI clarity.
 
 ---
 
 ## 🚨 What Happens
 
-- `(not set)` appears in `session_medium`, `session_campaign`
-- Occurs when UTMs are dropped, overwritten, or delayed
-- Seen on redirects, vanity URLs, or incorrect GTM triggers
+- `(not set)` appears in `session_medium`, `session_campaign`, or `source`
+- Typically caused by:
+  - UTMs being dropped during redirect
+  - UTMs overwritten by misfired tags
+  - Delayed GTM trigger on page load
+- Frequently seen in:
+  - Vanity URLs
+  - Third-party clickthroughs
+  - Interstitial pages or consent layers
 
 ---
 
 ## 💣 Why It’s a Problem
 
-- Wipes out campaign-level attribution
-- Marketing teams can’t justify spend
-- Analytics funnels lose source clarity
+- Wipes out critical attribution data in GA4
+- Makes it impossible for marketing to justify spend
+- Affects funnel analysis, channel optimization, and ROAS tracking
 
 ---
 
 ## ✅ What Was Done
 
-- Built real-time “UTM validator” inside GTM to catch live loss
-- Created fallback logic to preserve first-touch UTMs in cookie
-- Added alert in Tag Assistant if UTMs dropped before event
+- Built a **real-time UTM validator** inside GTM (via custom JS + Lookup Table)
+- Implemented **fallback logic** to preserve UTMs in cookies across redirects
+- Set up **Tag Assistant alerts** to catch when UTMs are missing or overwritten
 
 ---
 
 ## ⏳ RCA Potential
 
-This forms the foundation of the full RCA use case:  
-📁 `/use-cases/ecommerce/gtm-ga4-signal-break/not-set-campaign-medium`
+This bug has been promoted into full RCA form under:
+
+📁 `/use-cases/ecommerce/gtm-ga4-signal-break/not-set-campaign-medium/`
+
+---
+
+> “If attribution dies at the source, even perfect dashboards are lies.”
