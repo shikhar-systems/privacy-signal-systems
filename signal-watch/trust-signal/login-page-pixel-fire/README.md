@@ -1,32 +1,48 @@
 # 🔒 Login Page Pixel Fire
 
-This issue was observed during login flows where tracking pixels (e.g., Meta or GA4) were firing before or during user authentication screens.
+This issue captures a privacy-compromising behavior where **tracking pixels fire on login or authentication screens** — often unintentionally.
 
 ---
 
 ## 🚨 What Happens
 
-- Login or OTP screen triggers `PageView` or `Lead` events
-- Happens due to universal tag or hardcoded pixel in SPA templates
+- User lands on **Login** or **OTP verification** screen
+- Pixels (e.g., Meta PageView, GA4 events) fire before authentication
+- Caused by:
+  - Hardcoded tracking pixels in SPA templates
+  - Universal GTM triggers without route-level exclusion
 
 ---
 
 ## 💣 Why It’s a Problem
 
-- Violates user expectations of privacy
-- Can be flagged as "surveillance-like" behavior
-- Creates audit issues, especially for finance, healthcare, or education domains
+- Breaks user expectations of **confidentiality during authentication**
+- May be interpreted as **surveillance** by users, media, or regulators
+- Triggers **audit flags** in finance, healthcare, education, and public sector platforms
+- Violates principles of **minimization** and **contextual integrity**
 
 ---
 
 ## ✅ What Was Done
 
-- Audited GTM templates and moved tags under conditional triggers
-- Implemented custom triggers based on login route exclusion logic
-- Validated via GA4 DebugView and Meta Events Manager
+- Audited GTM setup and removed universal triggers
+- Added route-based conditional logic to defer pixel firing
+- Validated behavior using:
+  - ✅ GA4 DebugView  
+  - ✅ Meta Events Manager  
+  - ✅ Tag Assistant recordings on auth routes
 
 ---
 
 ## ⏳ RCA Potential
 
-May escalate if found across journeys like registration, payments, or contact forms.
+Strong candidate for escalation under:
+📁 `/use-cases/ecommerce/trust-signal/login-page-pixel-fire/`  
+Especially when combined with similar issues in:
+- Registration flows  
+- Checkout/payment gateways  
+- Sensitive user action screens
+
+---
+
+> “Trust isn’t broken by pixels — it’s broken by *where* they fire.”
