@@ -10,7 +10,7 @@ Each issue in this folder is:
 
 ✅ Reproducible  
 ✅ RCA-validated  
-✅ System-linked (consent → signal → RCA)  
+✅ System-linked (Consent → Signal → RCA)  
 ✅ Monetizable or risk-relevant  
 ✅ Mapped by industry and signal type
 
@@ -40,7 +40,12 @@ Each folder includes:
 
 ## 🔐 Why Limited Access?
 
-To preserve originality and IP integrity, core RCA files are shared only upon request with qualified stakeholders (CxOs, legal advisors, public infrastructure leads, AI governance teams, etc.)
+To preserve originality and IP integrity, core RCA files are shared only upon request with qualified stakeholders such as:
+
+- CxOs or Chief Data Officers
+- Legal, compliance, or privacy officers
+- Public infrastructure decision-makers
+- AI governance and ethics teams
 
 ---
 
