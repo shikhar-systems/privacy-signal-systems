@@ -1,8 +1,8 @@
 # 📂 00_docs — System Intelligence
 
-This folder contains foundational documents to understand, design, and communicate the **system-level logic** behind privacy-first signal architecture and RCA-based resolution.
+This folder contains foundational documents to **understand, design, and communicate** the system-level logic behind **privacy-first signal architecture** and **RCA-based resolution thinking**.
 
-It serves as both a strategic and technical guide — helping teams, executives, and platform architects align on the "why" and "how" behind each signal decision.
+It serves as both a **strategic briefing layer** and a **technical guide** — empowering executives, architects, and reformers to align on *why systems break* and *how to build them back stronger*.
 
 ---
 
@@ -12,30 +12,31 @@ It serves as both a strategic and technical guide — helping teams, executives,
 |------|---------|
 | `architecture_overview.md` | Blueprint of the Consent → Signal → RCA pipeline (with flow diagrams) |
 | `audience_targets.md` | Profiles of intended beneficiaries: executive, data, product, governance roles |
-| `industry_impact_matrix.md` | Mapping of use cases to industry verticals for impact clarity |
-| `monetizable_leaks.md` | ₹ / $ value lost or saved via each RCA use case — business case builder |
+| `industry_impact_matrix.md` | Mapping of RCA use cases to industry verticals for impact clarity |
+| `monetizable_leaks.md` | ₹ / $ losses plugged or prevented via RCA — builds business case and urgency |
+| `system_execution_plan.md` | End-to-end RCA system rollout view — modular, repeatable, leadership-ready |
 
 ---
 
 ## 🎯 Who Should Use This Folder
 
-- **System architects & solution designers** defining privacy and data collection workflows
-- **CxOs or Chiefs of Staff** preparing to pitch or defend platform redesigns
-- **Compliance and legal leaders** requiring traceable, justifiable digital behavior
-- **Policy designers and reform-minded technocrats** looking to systematize signal fairness
+- **System architects & signal designers** defining privacy and data collection workflows
+- **CxOs, Chiefs of Staff & Founders** preparing to pitch, audit, or rewire platforms
+- **Governance, compliance & legal leaders** seeking traceable, justified digital behavior
+- **Policy advisors and reform-minded technocrats** systematizing trust and digital fairness
 
 ---
 
-## 🔍 Why It Matters
+## 🔍 Why This Folder Matters
 
-- These docs ensure that **every RCA-backed fix has a story, a diagram, and a monetary impact**.
-- They help **transform silent data leaks into visible, fixable flaws**.
-- And they build confidence across leadership, showing that signal failures are solvable — at scale, and with clarity.
+- Every RCA use case here has **a story, a diagram, and a monetizable outcome**
+- Turns **silent signal failures into executive-actionable roadmaps**
+- Helps cross-functional teams justify **platform redesigns, funding, or reforms** with system clarity
 
 ---
 
 ## 🧠 Bonus Tip
 
-This folder isn’t just for documentation — it’s for decision-making.  
-Share individual files from here in boardrooms, audits, VC decks, or data governance meetings. They’re designed to translate complexity into action.
-
+This folder is more than documentation — it’s a **decision layer**.  
+Use these insights in boardrooms, public audits, policy think tanks, or platform review decks.  
+They translate technical signals into **actionable system narratives** — with impact.
