@@ -6,20 +6,26 @@ Behavioral signals used for AI training (recommendation, prediction) are capture
 
 ## 🚨 What Happens
 
-- AI systems are trained only on English-labeled events
-- Hindi/Tamil/other-language users get poor personalization
-- Decision quality declines for large segments of India
+- AI training pipelines ingest only English-tagged user events
+- Vernacular users (Hindi, Tamil, Bengali, etc.) generate signals that aren’t logged or classified properly
+- Resulting models overfit to English-speaking behavior
 
 ---
 
 ## 💣 Why It’s a Problem
 
-- Leads to invisible discrimination in AI outcomes
-- Violates ethical AI and fairness standards
-- May breach upcoming AI regulatory frameworks
+- Personalization fails for majority of Indian user base
+- Model decisions reflect cultural blind spots
+- Violates ethical AI principles and fairness guidelines
+- Creates risks under draft Indian AI regulation and global AI Act (EU)
 
 ---
 
 ## ⏳ RCA Potential
 
-To be developed into a flagship RCA under “Signal-Aware AI Fairness Stack”
+To be developed into a **flagship RCA** under:  
+📁 `/use-cases/ai-product/signal-aware-ai-fairness-stack/`
+
+---
+
+> “AI trained in one language cannot serve a multilingual nation. Bias begins at signal capture — not just model weights.”
