@@ -18,6 +18,16 @@ This folder highlights **anomalies that could distort AI model training, persona
 - Leads to model hallucinations or user targeting failures
 - Reduces explainability and auditability of automated systems
 - Breaks trust in AI-powered experiences
+- Corrupts AI decisions across eCommerce, healthcare, education, and governance platforms
+
+---
+
+## ⏳ RCA Potential
+
+These anomalies can escalate into full RCA use cases under:
+- `ai-product/` (e.g., hallucinations from consent-unaware signals)
+- `ecommerce/` (e.g., personalization misfires from stacked triggers)
+- `healthcare/` (e.g., AI alerts based on misclassified signals)
 
 ---
 
