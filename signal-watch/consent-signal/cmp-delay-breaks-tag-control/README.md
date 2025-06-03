@@ -6,27 +6,35 @@ This issue occurs when the Consent Management Platform (CMP) loads *after* GTM, 
 
 ## 🚨 What Happens
 
-- CMP fires with visual banner
-- But GTM doesn't receive updated consent status in time
-- Tags fire on page load regardless of user choice
+- CMP appears with visual banner  
+- But GTM initializes before receiving consent state  
+- Tags (GA4, Meta Pixel, LinkedIn, etc.) fire on page load — without confirmed user choice  
 
 ---
 
 ## 💣 Why It’s a Problem
 
-- Violates GDPR, CPRA if cookies/tags are dropped without prior consent
-- Tag vendors may auto-load (Meta Pixel, GA4, LinkedIn)
-- Creates false signal integrity and legal exposure
+- Violates GDPR, CPRA if cookies/tags are dropped before consent  
+- Vendors with auto-load behavior bypass user intent  
+- Generates false signal integrity → pollutes analytics and attribution  
+- Legal exposure + user trust erosion  
 
 ---
 
-## ✅ What Was Done
+## ✅ Temporary Fix Applied
 
-- Deferred GTM script using a `window.dataLayer.push({event: 'cmp_ready'})` logic
-- Added blocking triggers and resolved race condition via callback
+- Deferred GTM execution using:  
+  `window.dataLayer.push({ event: 'cmp_ready' })`  
+- Introduced blocking triggers + callback logic to prevent race condition  
 
 ---
 
 ## ⏳ RCA Potential
 
-Ideal for RCA promotion in enterprise sites with multiple CMP-GTM sync issues.
+**Promotable Use Case**:  
+> CMP-GTM Timing Mismatch in Consent-First Platforms
+
+This belongs under:  
+🗂️ `signal-watch/consent-signal/` → candidate for `use-cases/ecommerce/` or `use-cases/government/`
+
+> “When CMP lags, GTM leads — and privacy silently fails.”
