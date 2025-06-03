@@ -1,60 +1,68 @@
 # 🧩 Use Cases — RCA-Approved System Failures
 
-This folder contains validated system-level failures that passed the `Signal Watch` phase and were confirmed through Root Cause Analysis (RCA). Each issue is tied to real-world monetizable risk, user trust gaps, or AI/system drift — and mapped to its relevant industry vertical.
+This folder contains validated use cases that **originated from weak signal anomalies** and were confirmed through a full **Root Cause Analysis (RCA)** loop.
+
+Each case represents a **system-level failure** — from signal to trust — with **real monetizable or regulatory impact**.
 
 ---
 
 ## 🔍 What Qualifies as a Use Case?
 
-Each entry in this folder is:
+Every RCA use case in this repository is:
 
-✅ Reproducible  
-✅ RCA-validated  
-✅ Consent → Signal → RCA mapped  
-✅ Monetizable or risk-relevant  
-✅ Categorized by business domain
+✅ Reproducible in test or live environments  
+✅ Mapped through the Consent → Signal → RCA chain  
+✅ Monetizable (saves/reclaims revenue or prevents legal risk)  
+✅ Architecturally relevant (affects GTM, GA4, CMP, or AI stack)  
+✅ Tiered by industry verticals for practical stakeholder alignment
 
 ---
 
 ## 🏭 Industry Folders
 
-| Folder           | Description                                                              |
-|------------------|--------------------------------------------------------------------------|
-| `ai-product/`      | AI drift, personalization bias, model failure due to noisy signals        |
-| `ecommerce/`       | Attribution gaps, GTM/GA4 errors, consent-trigger race conditions         |
-| `fintech/`         | Privacy, trust, or compliance breakdowns in financial user journeys       |
-| `government/`      | Signal misfires in public digital infra, multilingual consent, trust gaps |
-| `enterprise-retail/` | Consent fatigue, signal mismatch, or RCA drift across large retail platforms |
+| Folder            | Description                                                        |
+|-------------------|--------------------------------------------------------------------|
+| `ecommerce/`       | Signal drift in GTM/GA4 pipelines, quantity duplication, attribution gaps |
+| `fintech/`         | Consent violations, login signal leaks, timing-related compliance breakdowns |
+| `govstack/`        | Multilingual consent failure, cross-domain attribution gaps, trust erosion |
+| `enterprise/`      | Complex CMP-GTM sync failures, SPA tracking errors, audit risks     |
+| `ai-product/`      | Noisy or biased signal pipelines affecting AI training or personalization |
+| `retail-media/`    | Misfiring pixels, metadata leaks, and campaign drop-offs affecting ROAS |
+
+> These folders are tags, not silos — every RCA is modular and often reusable across sectors.
 
 ---
 
-## 📁 Folder Contents
+## 📁 Folder Structure
 
-Each industry folder includes:
+Each use case is structured into 4 files:
 
-- `README.md`: Public summary (non-sensitive)
-- `architecture.md`: Consent → Signal → RCA trace *(on request)*
-- `impact.md`: Business, legal, or systemic fallout *(on request)*
-- `solution.md`: Strategic + technical fix *(on request)*
-
----
-
-## 🔐 Why Limited Access?
-
-The system thinking in these RCAs carries **strategic weight** — often touching:
-
-- Privacy design
-- Cross-team ownership
-- Future audit defense
-- Platform redesign costs
-
-To preserve integrity and originality:
-
-> 🔒 Core RCA files are only shared with verified senior stakeholders:
-- Chief Data/Privacy/Technology Officers  
-- Government or legal review panels  
-- Board-level or AI policy governance teams
+| File            | Description                                      | Access     |
+|-----------------|--------------------------------------------------|------------|
+| `README.md`     | Summary of the issue and RCA snapshot            | Public     |
+| `architecture.md` | Consent → Signal → RCA mapping with diagrams   | On Request |
+| `impact.md`     | Revenue loss, compliance risk, or trust damage   | On Request |
+| `solution.md`   | System-level fix with strategic value            | On Request |
 
 ---
 
-> “These are not bug reports. These are **system vulnerabilities with business DNA**.”
+## 🔐 Why We Don’t Expose Everything Publicly
+
+- RCA intelligence is original IP
+- Impact and fix logic can be **exploited by low-quality vendors**
+- Access is **shared upon validation**, usually with:
+  - CIOs, CDOs, CPOs or CEOs
+  - Legal or privacy officers
+  - Government digital stack teams
+  - AI ethics and audit frameworks
+
+---
+
+## 🧠 Use This Folder To
+
+- Build high-trust interviews with RCA-backed credibility
+- Educate teams and stakeholders on signal integrity
+- Influence CxOs without direct outreach
+- Create GitHub and LinkedIn magnetism from quiet technical depth
+
+> “This folder doesn’t expose code — it reveals trust leaks in modern systems. Fix them, and you don’t just solve bugs — you lead movements.”
