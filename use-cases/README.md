@@ -1,52 +1,60 @@
 # 🧩 Use Cases — RCA-Approved System Failures
 
-This folder contains validated use cases that passed the Signal Watch stage and were confirmed through Root Cause Analysis (RCA). Each is mapped to an industry vertical and represents a system-level flaw with real impact.
+This folder contains validated system-level failures that passed the `Signal Watch` phase and were confirmed through Root Cause Analysis (RCA). Each issue is tied to real-world monetizable risk, user trust gaps, or AI/system drift — and mapped to its relevant industry vertical.
 
 ---
 
 ## 🔍 What Qualifies as a Use Case?
 
-Each issue in this folder is:
+Each entry in this folder is:
 
 ✅ Reproducible  
 ✅ RCA-validated  
-✅ System-linked (Consent → Signal → RCA)  
+✅ Consent → Signal → RCA mapped  
 ✅ Monetizable or risk-relevant  
-✅ Mapped by industry and signal type
+✅ Categorized by business domain
 
 ---
 
 ## 🏭 Industry Folders
 
-| Folder         | Description                                |
-|----------------|--------------------------------------------|
-| `ecommerce/`    | Attribution gaps, signal duplication, GTM-GA4 breakdowns |
-| `government/`   | Consent handling in public digital infrastructure |
-| `healthcare/`   | Non-consented medical data tracking        |
-| `ai-product/`   | AI drift due to noisy or unstructured signal flows |
+| Folder           | Description                                                              |
+|------------------|--------------------------------------------------------------------------|
+| `ai-product/`      | AI drift, personalization bias, model failure due to noisy signals        |
+| `ecommerce/`       | Attribution gaps, GTM/GA4 errors, consent-trigger race conditions         |
+| `fintech/`         | Privacy, trust, or compliance breakdowns in financial user journeys       |
+| `government/`      | Signal misfires in public digital infra, multilingual consent, trust gaps |
+| `enterprise-retail/` | Consent fatigue, signal mismatch, or RCA drift across large retail platforms |
 
 ---
 
 ## 📁 Folder Contents
 
-Each folder includes:
+Each industry folder includes:
 
-- `README.md`: Use case summary (non-sensitive)
-- `architecture.md`: Consent → Signal → RCA mapping *(available on request)*
-- `impact.md`: Revenue loss, legal risk, or trust breakdown *(available on request)*
-- `solution.md`: Strategic + technical resolution *(available on request)*
+- `README.md`: Public summary (non-sensitive)
+- `architecture.md`: Consent → Signal → RCA trace *(on request)*
+- `impact.md`: Business, legal, or systemic fallout *(on request)*
+- `solution.md`: Strategic + technical fix *(on request)*
 
 ---
 
 ## 🔐 Why Limited Access?
 
-To preserve originality and IP integrity, core RCA files are shared only upon request with qualified stakeholders such as:
+The system thinking in these RCAs carries **strategic weight** — often touching:
 
-- CxOs or Chief Data Officers
-- Legal, compliance, or privacy officers
-- Public infrastructure decision-makers
-- AI governance and ethics teams
+- Privacy design
+- Cross-team ownership
+- Future audit defense
+- Platform redesign costs
+
+To preserve integrity and originality:
+
+> 🔒 Core RCA files are only shared with verified senior stakeholders:
+- Chief Data/Privacy/Technology Officers  
+- Government or legal review panels  
+- Board-level or AI policy governance teams
 
 ---
 
-> “This repository does not expose code — it reveals systems. And systems deserve protection.”
+> “These are not bug reports. These are **system vulnerabilities with business DNA**.”
