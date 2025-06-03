@@ -21,12 +21,12 @@ Most broken signals are either:
 
 ## 🗂️ Folder Structure
 
-| Folder             | What It Captures                                 |
-|--------------------|--------------------------------------------------|
-| `consent-signal/`   | Invalid, missing, or non-contextual consent signals |
-| `trust-signal/`     | Signals that affect user trust (e.g., dark patterns) |
-| `attribution-signal/`| Misattribution, missing referrers, `not set` values |
-| `ai-signal/`         | Signals that may corrupt AI training or personalization |
+| Folder               | What It Captures                                       |
+|----------------------|--------------------------------------------------------|
+| `consent-signal/`     | Invalid, missing, or non-contextual consent signals    |
+| `trust-signal/`       | Signals that affect user trust (e.g., dark patterns)   |
+| `attribution-signal/` | Misattribution, missing referrers, `not set` values    |
+| `ai-signal/`          | Signals that may corrupt AI training or personalization|
 
 ---
 
