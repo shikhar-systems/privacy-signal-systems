@@ -17,17 +17,13 @@ To be included here, a case must be:
 
 ---
 
-## 🏭 Industry Folders
+## 🏭 Industry Folders (Live)
 
-| Folder             | Description                                                |
-|--------------------|------------------------------------------------------------|
-| `ecommerce/`        | Attribution gaps, consent breakdowns, server-side errors   |
-| `public-sector/`    | Consent in citizen-facing portals, government analytics    |
-| `healthcare/`       | Medical data tracking, login signal issues                |
-| `fintech/`          | Pixel misfires, trust signals, consent architecture gaps   |
-| `ai-product/`       | Model drift, AI fairness bugs, black-box signal flaws      |
-| `enterprise/`       | CMP sync bugs, identity conflicts, enterprise-scale drops  |
-| `retail-media/`     | Campaign signal gaps, ROAS misfire, misattribution bugs    |
+| Folder        | Description                                                |
+|---------------|------------------------------------------------------------|
+| `ecommerce/`   | Attribution gaps, consent breakdowns, server-side errors   |
+
+*More domains like AI, Fintech, and Retail Media will be added as RCA releases go live.*
 
 ---
 
