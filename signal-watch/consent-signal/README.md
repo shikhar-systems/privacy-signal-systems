@@ -1,23 +1,52 @@
-# 🛡️ Consent Signal
+# 🛡️ Consent Signal — Pre-RCA Integrity Layer
 
-This folder logs **pre-RCA anomalies** where user consent is missing, misfired, or contextually invalid — even if tags appear to work.
+This folder tracks **pre-RCA anomalies** where user consent is:
+
+- Missing
+- Misfired
+- Contextually invalid  
+—even when the tags “seem” to work.
+
+These silent failures often go unnoticed in GTM/GA4 setups — but they corrupt everything downstream.
 
 ---
 
 ## 🚨 Common Consent Signal Failures
 
 - Tags fire **before explicit opt-in**
-- CMP triggers visually, but **status isn’t stored**
-- Region-based logic silently **bypasses consent in certain geos**
-- GTM loads **before consent layer sets required data**
+- CMP appears on-screen but **fails to store consent status**
+- Region-based logic **bypasses consent enforcement**
+- Consent data layer not ready before GTM loads  
+- GTM templates behave differently than custom HTML under consent
 
 ---
 
-## 🔍 Why It Matters
+## 🧨 Why This Matters
 
-- Violates **privacy frameworks** (GDPR, CPRA, etc.)  
-- Pollutes attribution, personalization, and analytics signals  
-- Creates invisible **compliance risk** and weakens system trust
+| Signal Breakdown                      | System Consequence                        |
+|--------------------------------------|--------------------------------------------|
+| Premature tag firing                 | Legal violations (GDPR, CPRA, etc.)        |
+| Inconsistent consent status          | Inauditable data flows                     |
+| Consent not stored or surfaced       | Breaks trust with regulators + users       |
+| Misaligned GTM behavior              | Non-compliant analytics or marketing fire  |
+
+> “Consent isn’t a popup — it’s a contract. If it’s broken, every signal is suspect.”
+
+---
+
+## 📍 Escalation to RCA
+
+These issues escalate to formal RCA when:
+
+✅ Impact spans legal, analytics, and marketing  
+✅ Inconsistencies are reproducible across geographies/devices  
+✅ Signal loss traces back to CMP, GTM, or dev-side integration gaps  
+✅ The business can’t prove consent-backed tracking when audited
+
+Promoted RCA examples:
+
+- `/use-cases/ecommerce/tag-fired-no-conversion/`  
+- `/use-cases/gtm-ga4-core/consent-mismatch-silent-tag-failure/`
 
 ---
 
