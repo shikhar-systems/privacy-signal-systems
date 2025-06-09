@@ -1,23 +1,23 @@
 # 🛡️ Consent Signal
 
-This folder logs pre-RCA issues where **user consent is missing, misfired, or contextually invalid**.
+This folder logs **pre-RCA anomalies** where user consent is missing, misfired, or contextually invalid — even if tags appear to work.
 
 ---
 
-## 🚨 Examples of Consent Signal Issues
+## 🚨 Common Consent Signal Failures
 
-- Tracking fires before user gives explicit consent
-- Consent banner triggers but doesn't store status
-- Region-based logic bypasses consent for specific geos
-- Consent data layer not available to tag manager on time
+- Tags fire **before explicit opt-in**
+- CMP triggers visually, but **status isn’t stored**
+- Region-based logic silently **bypasses consent in certain geos**
+- GTM loads **before consent layer sets required data**
 
 ---
 
 ## 🔍 Why It Matters
 
-- Violates user trust and privacy laws (GDPR, CPRA, etc.)
-- Pollutes downstream signals that rely on valid consent
-- Leads to audit failure and legal risk
+- Violates **privacy frameworks** (GDPR, CPRA, etc.)  
+- Pollutes attribution, personalization, and analytics signals  
+- Creates invisible **compliance risk** and weakens system trust
 
 ---
 
