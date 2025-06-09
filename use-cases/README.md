@@ -1,18 +1,19 @@
-# 🧩 Use Cases — RCA-Approved System Failures
+# 🧩 Validated Use Cases — RCA-Classified Signal Failures
 
-This folder contains validated use cases that passed the Signal Watch stage and were confirmed through Root Cause Analysis (RCA). Each use case is mapped to an industry vertical and represents a **system-level flaw with real-world impact**.
+This folder contains confirmed use cases that passed the Signal Watch stage and were validated through Root Cause Analysis (RCA).  
+Each issue reflects a **system-level signal failure** with tangible impact — monetizable, reputational, or compliance-based.
 
 ---
 
 ## 🔍 What Qualifies as a Use Case?
 
-Each issue here is:
+To be included here, a case must be:
 
-✅ Reproducible  
-✅ RCA-validated  
-✅ System-linked (Consent → Signal → RCA)  
-✅ Monetizable or compliance-relevant  
-✅ Categorized by industry and signal type
+✅ Reproducible and RCA-verified  
+✅ Linked to systemic architecture (Consent → Signal → RCA)  
+✅ Rooted in real-world tracking, measurement, or signal leakage  
+✅ Monetizable, legally significant, or product-breaking  
+✅ Categorized by industry and mapped to signal types
 
 ---
 
@@ -20,35 +21,35 @@ Each issue here is:
 
 | Folder             | Description                                                |
 |--------------------|------------------------------------------------------------|
-| `ecommerce/`        | Attribution gaps, signal duplication, GTM-GA4 breakdowns   |
-| `public-sector/`    | Consent handling in public-facing digital infrastructure   |
-| `healthcare/`       | Non-consented medical data tracking, login signal issues   |
-| `fintech/`          | Trust signal violations, pixel misfires, audit blockers    |
-| `ai-product/`       | Model drift from noisy inputs, AI fairness signal flaws    |
-| `enterprise/`       | CMP sync bugs, system-wide consent failures                |
-| `retail-media/`     | Campaign misattribution, broken event timing, ROAS issues  |
+| `ecommerce/`        | Attribution gaps, consent breakdowns, server-side errors   |
+| `public-sector/`    | Consent in citizen-facing portals, government analytics    |
+| `healthcare/`       | Medical data tracking, login signal issues                |
+| `fintech/`          | Pixel misfires, trust signals, consent architecture gaps   |
+| `ai-product/`       | Model drift, AI fairness bugs, black-box signal flaws      |
+| `enterprise/`       | CMP sync bugs, identity conflicts, enterprise-scale drops  |
+| `retail-media/`     | Campaign signal gaps, ROAS misfire, misattribution bugs    |
 
 ---
 
 ## 📁 Folder Contents
 
-Each folder includes:
+Each use case folder may include:
 
-- `README.md`: Use case summary (non-sensitive overview)
+- `README.md`: Public summary (non-sensitive)
 - `architecture.md`: Consent → Signal → RCA mapping *(available on request)*
-- `impact.md`: Business, legal, or reputational consequences *(available on request)*
-- `solution.md`: Strategic and technical resolution *(available on request)*
+- `impact.md`: Monetization loss or compliance risk *(available on request)*
+- `solution.md`: Strategic and technical fix *(available on request)*
 
 ---
 
-## 🔐 Why Limited Access?
+## 🔒 Why Limited Access?
 
-To protect originality and system intelligence, **core RCA files** are available only upon request and intended for:
+To protect platform integrity and proprietary RCA frameworks, core files are available only upon request and intended for:
 
-- Chief Data Officers (CDOs) and System Architects  
+- CxOs, Group VPs, Product/Data Leadership  
 - Legal, Privacy, and Compliance Teams  
-- Public Infrastructure or AI Governance Bodies  
+- Government or RegTech Bodies assessing systemic weaknesses  
 
 ---
 
-> “This repository doesn’t expose code — it reveals **architecture-level weaknesses**. And architecture deserves protection.”
+> “This repository doesn’t expose code — it surfaces **architectural failure patterns** in modern platforms. And architecture deserves protection.”
