@@ -1,34 +1,41 @@
-# 🤖 AI Signal
+# 🤖 AI Signal — Pre-RCA Monitoring Layer
 
-This folder highlights **anomalies that could distort AI model training, personalization, or automation logic**.
+This folder highlights **anomalies that quietly distort AI behavior** — including training bias, personalization misfires, and decision automation drift.
 
----
-
-## 🚨 Examples of AI Signal Issues
-
-- Duplicate or noisy event data polluting training sets
-- Noisy consent signals being used as personalization inputs
-- Misclassified user behavior causing wrong cohort mapping
-- Trigger stacking inflating engagement metrics
+These are the invisible cracks that break AI trust before dashboards ever notice.
 
 ---
 
-## 🔍 Why It Matters
+## 🔍 What AI Signal Anomalies Look Like
 
-- Leads to model hallucinations or user targeting failures
-- Reduces explainability and auditability of automated systems
-- Breaks trust in AI-powered experiences
-- Corrupts AI decisions across eCommerce, healthcare, education, and governance platforms
-
----
-
-## ⏳ RCA Potential
-
-These anomalies can escalate into full RCA use cases under:
-- `ai-product/` (e.g., hallucinations from consent-unaware signals)
-- `ecommerce/` (e.g., personalization misfires from stacked triggers)
-- `healthcare/` (e.g., AI alerts based on misclassified signals)
+- Duplicate or noisy event streams polluting training sets  
+- Consent-ambiguous inputs reaching AI-driven personalization  
+- Misclassified user actions causing cohort drift  
+- Trigger stacking inflating engagement or model weights
 
 ---
 
-> “AI doesn’t fail randomly — it fails silently when signals are wrong.”
+## 🚨 Why It Matters
+
+- Causes silent hallucinations or decision errors  
+- Breaks explainability, auditability, and compliance trails  
+- Reduces confidence in AI-powered journeys (ecommerce, healthcare, edtech, public systems)  
+- Magnifies risk in both real-time and training-time decisions
+
+---
+
+## ⏳ RCA Promotion Path
+
+AI signal anomalies in this folder may be elevated to full RCA under:
+
+- `/use-cases/ai-product/` (e.g., LLM hallucinations from malformed input signals)  
+- `/use-cases/ecommerce/` (e.g., engagement loops inflating recommender bias)  
+- `/use-cases/healthcare/` (e.g., misfired alerts from consent-blind inputs)
+
+---
+
+> “AI doesn’t fail randomly — it fails quietly when upstream signals go wrong.”
+
+---
+
+🛰️ This layer exists to make silent failure observable — before AI outcomes become irreversible.
