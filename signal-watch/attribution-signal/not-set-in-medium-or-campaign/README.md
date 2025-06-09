@@ -1,44 +1,49 @@
-# 🎯 `not set` in Medium or Campaign (GA4/GTM)
+# 🎯 RCA Candidate – `(not set)` in GA4 Medium or Campaign
 
-This is one of the most common attribution bugs observed across ecommerce and digital platforms — and it silently destroys campaign ROI clarity.
-
----
-
-## 🚨 What Happens
-
-- `(not set)` appears in `session_medium`, `session_campaign`, or `source`
-- Typically caused by:
-  - UTMs being dropped during redirect
-  - UTMs overwritten by misfired tags
-  - Delayed GTM trigger on page load
-- Frequently seen in:
-  - Vanity URLs
-  - Third-party clickthroughs
-  - Interstitial pages or consent layers
+One of the most silently destructive attribution bugs in modern marketing analytics.  
+`(not set)` appears in `session_medium`, `session_campaign`, or `source` fields — and erases the ability to track ROI.
 
 ---
 
-## 💣 Why It’s a Problem
+## 🚨 What’s Going Wrong
 
-- Wipes out critical attribution data in GA4
-- Makes it impossible for marketing to justify spend
-- Affects funnel analysis, channel optimization, and ROAS tracking
+This issue typically shows up when:
+
+- UTMs are dropped during redirect (e.g., vanity → destination)
+- Tags overwrite UTM parameters before GA4 reads them
+- GTM fires too late due to heavy consent layers or slow DOM
+
+Most common environments:
+
+- Branded/shortened URLs (e.g., mysite.link/deal → mysite.com)
+- Third-party tools or CRMs inserting interstitials
+- Single Page Apps with reload or hashchange quirks
 
 ---
 
-## ✅ What Was Done
+## 💣 Why It Matters
 
-- Built a **real-time UTM validator** inside GTM (via custom JS + Lookup Table)
-- Implemented **fallback logic** to preserve UTMs in cookies across redirects
-- Set up **Tag Assistant alerts** to catch when UTMs are missing or overwritten
+- Attribution blind spots — marketing ROI vanishes
+- Channel optimization breaks — media spend looks wasted
+- GA4 reports become misleading — decision-makers lose trust
 
 ---
 
-## ⏳ RCA Potential
+## 🛠️ What We Built to Catch & Prevent It
 
-This bug has been promoted into full RCA form under:
+- ✅ A **Real-Time UTM Validator** (custom JS + GTM Lookup Table)
+- ✅ A **UTM Fallback Mechanism** (preserves values via cookie/sessionStorage)
+- ✅ **Tag Assistant alerts** when `utm_campaign`, `utm_medium`, or `source` is missing
 
-📁 `/use-cases/ecommerce/gtm-ga4-signal-break/not-set-campaign-medium/`
+---
+
+## ⏳ RCA Promotion Status
+
+This issue has been promoted into formal RCA investigation under:
+
+📁 `/use-cases/ecommerce/RCA/03-not-set-campaign-medium/`
+
+(If not yet published, it’s tracked in `/RCA-BACKLOG.md`)
 
 ---
 
