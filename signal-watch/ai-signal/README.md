@@ -1,49 +1,62 @@
 # 🤖 AI Signal — Pre-RCA Monitoring Layer
 
-This folder captures **anomalies that silently distort AI model behavior** — from training bias to broken personalization logic and explainability gaps.
+This folder captures **signal-level anomalies that distort AI behavior silently** — long before failures appear in dashboards or model outputs.
 
-These are the signals **too technical for marketing** and **too subtle for dashboards** — but critical to future-proofing AI.
+These are not model bugs.  
+They’re **input-side fractures**: noisy triggers, consent-blind events, and misfired personalization logic that can derail entire AI systems.
 
 ---
 
 ## 🔍 What AI Signal Anomalies Look Like
 
-- Noisy or duplicated inputs polluting training sets  
-- Consent-ambiguous events reaching personalization layers  
-- Trigger stacking that inflates engagement metrics  
-- Misclassified user paths causing cohort or intent drift  
+- Duplicated or noisy events polluting training sets  
+- Consent-ambiguous triggers reaching personalization engines  
+- Misclassified user actions corrupting intent prediction  
+- Stacked engagement triggers skewing optimization algorithms  
 
 ---
 
-## 🚨 Why It Matters
+## 🚨 Why This Matters
 
-| Risk | AI Consequence |
-|------|----------------|
-| Broken signals | Hallucinations, unsafe outputs |
-| Consent-blind inputs | Legal/audit failures |
-| Inconsistent tags | Personalization breakdown |
-| Drifted training logic | Model bias, performance loss |
+| Signal Risk            | AI Consequence                            |
+|------------------------|--------------------------------------------|
+| Broken event flow      | Hallucinations, unsafe LLM output         |
+| Consent-blind input    | Legal exposure, personalization flaws     |
+| Drifted cohorts        | Irrelevant product recos or alerts        |
+| Inconsistent tagging   | Loss of explainability and model trust    |
 
-These risks affect every AI touchpoint — from ecommerce recommendations to public health alerts and generative interfaces.
-
----
-
-## ⏳ RCA Promotion Path
-
-When validated, these anomalies escalate into formal RCA-backed cases under:
-
-- `/use-cases/ai-product/`  
-  (e.g., hallucinations from malformed signal flow)
-- `/use-cases/ecommerce/`  
-  (e.g., recommendation drift from noisy engagement signals)
-- `/use-cases/healthcare/`  
-  (e.g., AI alerts triggered by misclassified opt-in paths)
+> These aren’t dev bugs — they’re **system signal leaks** that ruin AI behavior silently.
 
 ---
 
-## 🛰️ Why This Layer Exists
+## 🛰️ What This Folder Enables
 
-Most AI failures don’t start in the model — they start in the **input pipeline**.  
-This folder gives your team a way to monitor, track, and escalate the earliest signs of AI signal corruption.
+- **Trace early warning signs** of AI performance drift  
+- Provide **QA visibility** into events affecting model integrity  
+- Enable **C-suite confidence** in AI personalization & automation  
+- Track what might **never surface in traditional QA** pipelines  
 
-> “AI doesn’t fail randomly — it fails quietly when signals go wrong.”
+---
+
+## 🧪 Escalation to RCA
+
+AI signal issues here may be escalated to `/use-cases/` when:
+
+✅ Reproducible  
+✅ Impacting a system or user outcome  
+✅ Mappable to architecture or data layer  
+✅ Validated through platform/network tracing
+
+---
+
+## 📦 Active AI Signal Use Cases
+
+| Folder Path                                                       | Escalation Status   | RCA ID  |
+|-------------------------------------------------------------------|----------------------|---------|
+| `firebase-install-event-loss/`                                    | ✅ Promoted           | RCA-16  |
+| `personalization-drift-from-consent-loss/`                        | 🟡 In progress        | (Planned) |
+| `llm-hallucination-on-malformed-input/`                           | 🟡 In progress        | (Planned) |
+
+---
+
+> “AI doesn’t fail randomly. It fails quietly — when upstream signals are wrong.”
