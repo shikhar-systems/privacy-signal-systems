@@ -6,44 +6,43 @@ In this case, a vendor pixel was firing, but no cookie sync or user matching occ
 
 ## 🔍 What Was Observed
 
-- Pixel fired → but status code was `307 Temporary Redirect` ❌  
-- URL was encoded via security proxy (Mimecast)  
-- No data received by vendor — cookies unsynced  
+- Pixel fired, but returned **307 Temporary Redirect**
+- URL was encoded via **security proxy (Mimecast)**
+- Vendor dashboard showed **no conversion data**
+- **Cookies remained unsynced**
 
 ---
 
 ## 🧠 Root Cause
 
-- ❌ Redirect via Mimecast stripped cookie headers  
-- 🔁 307 response failed to reach vendor endpoint  
-- ✅ Direct endpoint (302) restored cookie sync behavior
+- ❌ **Redirect via Mimecast** stripped cookie headers
+- 🔁 307 response interrupted identity sync
+- ✅ Direct endpoint using **302 Found** restored signal flow
 
 ---
 
 ## 🛠️ Fix Applied
 
-- Replaced Mimecast-altered URL with clean vendor endpoint  
-- Verified response changed to `302 Found`  
-- Vendor endpoint began registering signal receipt
+- Replaced security-encoded URL with **clean vendor endpoint**
+- Verified **302 response** from pixel server
+- Vendor began **registering conversion events** successfully
 
 ---
 
 ## ✅ Outcome
 
-- Restored cookie sync required for conversion correlation  
-- Pixel started responding as per spec  
-- Awaiting final vendor confirmation (no data leaks observed)
+- Cookie sync restored → conversion correlation possible
+- Vendor response status: ✅ Compliant and tracked
+- No data leaks or PII issues observed
 
 ---
 
-## 🔐 Files Available on Request
+## 🔐 Related Files (Available)
 
-- `architecture.md` – Redirect path breakdown + cookie sync logic  
-- `impact.md` – Missed conversion attribution + sync loss  
-- `solution.md` – Security bypass and redirect best practices  
-
----
+- `architecture.md` – Redirect path breakdown + sync logic
+- `impact.md` – Missed attribution explanation
+- `solution.md` – Security proxy bypass & redirect practices
 
 > “Redirects may look harmless — until they silence your pixels.”
 
-📍 RCA independently validated by system analyst  
+📍 *RCA independently validated by system analyst*
