@@ -1,48 +1,56 @@
 # 🎯 RCA 02 – Redirect Blocked Cookie Sync (307 ➜ 302 Fix)
 
-In this case, a vendor pixel was firing, but no cookie sync or user matching occurred. After tracing network behavior, a hidden redirect (307) was found to be the silent blocker — caused by a Mimecast-encoded security URL.
+In this case, a vendor marketing pixel appeared to fire normally. However, conversions were missing from the vendor dashboard. After inspecting network behavior, we uncovered a silent redirect — a `307 Temporary Redirect` caused by a security-layered URL (Mimecast) — that was **breaking cookie sync**.
 
 ---
 
-## 🔍 What Was Observed
+## 🔍 Observed Behavior
 
-- Pixel fired, but returned **307 Temporary Redirect**
-- URL was encoded via **security proxy (Mimecast)**
-- Vendor dashboard showed **no conversion data**
-- **Cookies remained unsynced**
+- ✅ Pixel fired (visible in GTM & Network tab)
+- 🔁 Returned **307 Temporary Redirect**
+- 🔒 URL wrapped via **Mimecast security proxy**
+- 🚫 Vendor dashboard showed **no matched conversions**
+- 🍪 No cookie was set or synced
 
 ---
 
 ## 🧠 Root Cause
 
-- ❌ **Redirect via Mimecast** stripped cookie headers
-- 🔁 307 response interrupted identity sync
-- ✅ Direct endpoint using **302 Found** restored signal flow
+- ❌ **307 Redirect** interrupted identity propagation
+- ❌ Cookie headers **stripped by Mimecast** redirect
+- 🔍 Intermediate hop → broke sync with vendor server
+- 🧪 No errors in browser, yet **signal silently dropped**
 
 ---
 
 ## 🛠️ Fix Applied
 
-- Replaced security-encoded URL with **clean vendor endpoint**
-- Verified **302 response** from pixel server
-- Vendor began **registering conversion events** successfully
+- Replaced the redirect-wrapped URL with **direct pixel endpoint**
+- 307 → 302 (server-side status confirmed)
+- Network call showed:  
+  `Status: 302` and `Set-Cookie: ✅`
+- Vendor immediately **registered conversions**
 
 ---
 
 ## ✅ Outcome
 
-- Cookie sync restored → conversion correlation possible
-- Vendor response status: ✅ Compliant and tracked
-- No data leaks or PII issues observed
+| Before Fix | After Fix |
+|------------|-----------|
+| 🔁 307 redirect | ✅ 302 direct endpoint |
+| ❌ Cookie sync failed | ✅ Cookie set successfully |
+| 🚫 Conversions not tracked | 📈 Conversions tracked correctly |
+| 🔒 Signal break (invisible) | 🔄 Full signal restored |
 
 ---
 
-## 🔐 Related Files (Available)
+## 🔐 Related Technical Assets
 
-- `architecture.md` – Redirect path breakdown + sync logic
-- `impact.md` – Missed attribution explanation
-- `solution.md` – Security proxy bypass & redirect practices
+- [`architecture.md`](./architecture.md) – Redirect path + consent-aware GTM flow
+- [`logic-explainer.md`](./logic-explainer.md) – Trigger + consent + redirect fix logic
+- [`impact.md`](./impact.md) – Attribution + identity mismatch analysis
+- [`solution.md`](./solution.md) – Redirection risk mitigation playbook
 
-> “Redirects may look harmless — until they silence your pixels.”
+> _“Redirects may look harmless — until they silence your pixels.”_
 
-📍 *RCA independently validated by system analyst*
+📍 _RCA independently executed and validated by system analyst_
