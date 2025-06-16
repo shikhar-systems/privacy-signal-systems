@@ -1,49 +1,16 @@
-# 🎯 RCA 01 – Tag Fired but No Conversion Recorded
+# RCA 01 – Deprecated (Merged into RCA 02)
 
-A common yet deceptive failure: GTM shows the tag fired, DevTools reports a 200 status — but the vendor reports zero conversions. This RCA captures the invisible fault line between browser firing and vendor data ingestion.
+This use case was initially being developed as **RCA 01**, focused on:
 
----
+> "Tag fired in GTM, but cookie sync failed due to mid-flight redirect."
 
-## 🔍 What Was Observed
+After deeper analysis, this scenario was found to be technically and causally overlapping with RCA 02.
 
-- GTM tag preview showed trigger match ✅  
-- Network call showed 200 OK ✅  
-- Vendor dashboard showed 0 conversions ❌  
+🧭 **Final Status: This RCA has been fully merged into RCA 02**  
+📂 Please refer to: [RCA 02 – Redirect Cookie Sync Failure](../02_tag-fired-redirect-cookie-sync-failed/)
 
----
-
-## 🧠 Root Cause
-
-- ❌ Custom HTML tag lacked required dynamic parameters
-- ✅ Template-based tag worked because it injected metadata automatically
-- 🧪 Comparing both tags showed missing variables on the custom version
+That folder now contains the full root cause, logic breakdown, impact analysis, and solution for both RCA 01 and RCA 02 combined.
 
 ---
-
-## 🛠️ Fix Applied
-
-- Deprecated custom HTML tag  
-- Switched to platform’s native tag template  
-- Live test confirmed proper data ingestion within 1 hour
-
----
-
-## ✅ Outcome
-
-- Conversions began flowing
-- Tag health monitoring established
-- Prevented silent loss from paid campaign clicks
-
----
-
-## 🔐 Files Available on Request
-
-- `architecture.md` – Trigger logic → Tag config → Signal handoff  
-- `impact.md` – Campaign ROI impact + vendor reporting gap  
-- `solution.md` – Mitigation flow + trigger hardening  
-
----
-
-> “Just because a tag fires doesn’t mean the data lands.”
-
-📍 RCA documented and validated by system investigator  
+**Status:** ✅ Deprecated and merged  
+**Redirect To:** `02_tag-fired-redirect-cookie-sync-failed/`
