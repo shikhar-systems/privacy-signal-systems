@@ -18,10 +18,10 @@ Each case reflects a **real-world system failure** that impacted production data
 
 ## ✅ Live RCA Use Cases
 
-| RCA ID | Title                                              | Status  |
-|--------|----------------------------------------------------|---------|
-| 01     | Tag fired but no conversion recorded               | 🟢 Live |
-| 02     | Redirect blocked cookie sync (307 ➜ 302 fix)       | 🟢 Live |
+| RCA ID | Title                                              | Status             |
+|--------|----------------------------------------------------|--------------------|
+| 01     | Tag fired but no conversion recorded               | 🔁 Merged into RCA 02 |
+| 02     | Redirect blocked cookie sync (307 ➜ 302 fix)       | ✅ Active & Live   |
 
 🔍 Each folder includes a public `README.md` and references to deeper RCA layers.
 
