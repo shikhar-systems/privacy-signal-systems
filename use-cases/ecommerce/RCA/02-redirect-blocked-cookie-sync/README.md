@@ -4,7 +4,7 @@ A vendor marketing pixel was firing from GTM and appeared normal in the browser 
 
 Upon inspection, the root issue was traced to a **307 redirect** triggered by a security-layer (Mimecast), which silently **broke the cookie sync process** — cutting off identity propagation mid-flight.
 
-Further analysis revealed this issue was technically identical to [RCA 01 – Tag Fired but No Conversion Recorded](../01-deprecated-merged-into-rca02/). Both have now been **merged** under this RCA.
+Further analysis revealed this issue was technically identical to [RCA 01 – Tag Fired but No Conversion Recorded](https://github.com/shikhar-systems/privacy-signal-systems/tree/main/use-cases/ecommerce/RCA/01-tag-fired-no-conversion). Both have now been **merged** under this RCA.
 
 ---
 
@@ -60,7 +60,7 @@ Further analysis revealed this issue was technically identical to [RCA 01 – Ta
 ## 🧭 RCA 01 Status
 
 > This RCA **absorbs and replaces**  
-> [`RCA 01 – Tag Fired but No Conversion Recorded`](../01-deprecated-merged-into-rca02/)
+> [`RCA 01 – Tag Fired but No Conversion Recorded`](https://github.com/shikhar-systems/privacy-signal-systems/tree/main/use-cases/ecommerce/RCA/01-tag-fired-no-conversion)
 
 ---
 
