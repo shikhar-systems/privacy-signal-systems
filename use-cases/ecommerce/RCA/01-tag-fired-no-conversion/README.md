@@ -14,3 +14,5 @@ That folder now contains the full root cause, logic breakdown, impact analysis, 
 ---
 **Status:** ✅ Deprecated and merged  
 **Redirect To:** `02_tag-fired-redirect-cookie-sync-failed/`
+
+💡 This cleanup was done to avoid duplication and to streamline signal communication across GitHub and LinkedIn.
