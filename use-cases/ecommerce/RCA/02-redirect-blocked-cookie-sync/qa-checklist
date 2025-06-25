@@ -1,0 +1,14 @@
+## RCA 02 — QA Checklist
+
+### ✅ Positive Test Scenarios:
+- [x] Conversion tag fires on thank-you page
+- [x] No redirect (307/302) in pixel call
+- [x] Cookies are synced across domains
+- [x] Endpoint returns 200 with valid response
+
+### 🚫 Negative Test Scenarios:
+- [x] Pixel call gets 307 status
+- [x] Sync cookies are not set
+- [x] Conversion not recorded despite tag firing
+
+> 💡 QA should simulate real user path, network behavior, and cookie presence.
