@@ -1,6 +1,4 @@
-## Strategic Lessons
-
-1. Always align your tag with page intent, not just URL.
-2. Validate using custom `dataLayer` variables when available.
-3. Never assume page type from path alone — use signal truth.
-4. QA should include negative case simulation (wrong page fire).
+### Key Lessons
+1. **“/” catches everything** — one slash can distort millions.  
+2. **Consent ≠ Intent** — CMP green, intent vector broken.  
+3. **Automate trigger linting** — a 2-line CI rule blocks six-figure mistakes.
