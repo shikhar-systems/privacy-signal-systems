@@ -1,7 +1,7 @@
-## RCA Impact Report
+### KPI Impact (USD)
 
-- **Trust Loss:** Stakeholders doubted analytics accuracy.
-- **Budget Impact:** Performance campaigns were over-attributed.
-- **Ops Delay:** Teams had to revalidate past data.
-- **Missed Conversions:** Business decisions based on false positives.
-- **Attribution Corruption:** Misled executive decisions and budget allocations.
+| Metric | Pre-Fix | Post-Fix | Change |
+|--------|---------|----------|--------|
+| Revenue mis-credited | **$1 500** | $0 | −100 % |
+| MLRI (Risk) | **72** | **3** | ▼ 69 |
+| Mis-allocated ad spend | **$580** | $0 | −100 % |
