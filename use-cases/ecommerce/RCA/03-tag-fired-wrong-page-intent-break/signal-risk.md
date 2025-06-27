@@ -1,6 +1,9 @@
-## Signal Risk Category
 
-- **Type:** Intent Signal Break
-- **What Broke:** Page-level trigger logic
-- **Signal Impacted:** Conversion attribution, campaign ROI
-- **Mitigation:** Use `dataLayer.pageType` or DOM certainty conditions
+# Signal Integrity Status
+
+| Date | MLRI | Status |
+|------|------|--------|
+| 01 Jul 2025 | 70 | 🔴 High |
+| 02 Jul 2025 | **3** | 🟢 Healthy |
+
+> *Numeric MLRI model is in early release; full weighting shared under NDA.*
