@@ -1,6 +1,6 @@
-- [x] Trigger narrowed to `/thank-you`
-- [x] Tag Assistant: no conversions on home/cart
+- [x] Regex trigger narrowed to `/summary/order-received/[^/]+`
+- [x] Tag Assistant: conversion fires only on /order-received (not home/cart)
 - [x] BigQuery backfill executed • MLRI ≤ 5
-- [ ] CI trigger-linter merged (`path must include "thank" OR "ty"`)
-- [ ] **dataLayer event `purchaseComplete` present on /thank-you**
-- [ ] **Google Ads conversion tag fires only on Custom Event trigger**
+- [ ] CI trigger-linter merged (`path must include "order-received"`)
+- [ ] dataLayer event `purchaseComplete` present on /order-received
+- [ ] Google Ads tag fires only on Custom Event (phase-2 hardening)
