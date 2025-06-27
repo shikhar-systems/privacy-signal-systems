@@ -1,7 +1,9 @@
-## Leadership Summary
+## Executive Narrative (≈ 90 sec)
 
-- **Problem:** A key GA4 tag fired on the wrong page (product page instead of thank-you page).
-- **Impact:** Misattributed conversions, inaccurate analytics, loss of team trust.
-- **Root Cause:** Trigger conditions were too broad and didn’t validate user journey intent.
-- **Fix:** Introduced a more reliable trigger using `dataLayer.pageType === 'thank-you'`.
-- **Lesson:** Intent-aligned tracking is critical for budget, analytics, and leadership confidence.
+**Symptom** — Conversions spiked on every channel.  
+**Root Cause** — Trigger rule `Page Path contains "/"` fired a Google Ads conversion tag on *all* pages.  
+**Cost** — Ad budgets shifted toward false winners (**$1 500 in 24 h**).  
+**Fix** — Restricted trigger to `/thank-you`, re-processed seven days of Ads data.  
+**Result** — MLRI 72 → 3, attribution integrity restored.
+
+> “Guessing doesn’t scale. Signal does.” – Shikhar 2.0
