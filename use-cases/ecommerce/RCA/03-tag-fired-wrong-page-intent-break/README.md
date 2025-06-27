@@ -1,13 +1,13 @@
-# RCA 03: Tag Fired on Wrong Page – Intent Break
+# RCA 03 • Wrong-Page Tag Fired — Intent Breakage  
 
-> When the signal fires, but the intent doesn’t match.
+| KPI | Before | After Fix | Δ |
+|-----|--------|-----------|---|
+| Conversions | 5 432 | 4 567 | −18 % |
+| MLRI (Risk) | 72 | **3** | ▼ 69 |
+| Revenue mis-attributed | **$1 500 / day** | $0 | −100 % |
 
-This RCA investigates a common but critical failure: a tag fired on the wrong page, leading to broken analytics intent, misattributed performance, and poor user targeting.
+**👉 Executive narrative:** `leadership-summary.md`
 
-We identify the root cause, simulate the bug, and share a safer dataLayer-based solution.
-
-🔧 RCA Category: **Intent Signal Break**  
-📊 Impacted Layer: **Trigger Logic + Tag Execution**  
-🧠 Solution: Use `dataLayer.pageType === 'thank-you'` for reliable targeting
-
-➡️ For executive summary, see [`leadership-summary.md`](./leadership-summary.md)
+> 🔒 **Exclusive for C-Suite:** A concise 2-minute Loom walk-through (trigger misfire → risk metrics → live fix) is secured in a private vault.  
+> CEO / CIO may request access via LinkedIn DM to **https://www.linkedin.com/in/shikhar-data** with subject “RCA 03 Executive Demo”.  
+> Additional supporting artefacts are available only under mutual NDA.
