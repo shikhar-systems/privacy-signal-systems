@@ -2,3 +2,5 @@
 - [x] Tag Assistant: no conversions on home/cart
 - [x] BigQuery backfill executed • MLRI ≤ 5
 - [ ] CI trigger-linter merged (`path must include "thank" OR "ty"`)
+- [ ] **dataLayer event `purchaseComplete` present on /thank-you**
+- [ ] **Google Ads conversion tag fires only on Custom Event trigger**
