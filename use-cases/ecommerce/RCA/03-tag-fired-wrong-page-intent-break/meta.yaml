@@ -1,5 +1,12 @@
-id: rca-03
-category: intent-signal
-status: public
-industry: ecommerce
-slug: tag-fired-wrong-page-intent-break
+case_id: "RCA-03"
+industry: "ecommerce"
+severity: "medium"
+mlri_before: 72
+mlri_after: 3
+date_detected: "2025-06-01"
+date_fixed: "2025-06-12"
+tags:
+  - Google-Ads        # wrong-page conversion hit
+  - GTM               # trigger mis-config in Google Tag Manager
+  - Conversion
+  - Trigger
