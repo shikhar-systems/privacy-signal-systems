@@ -1,0 +1,6 @@
+title: "Tag Fired on Form Submit Page Before User Submission"
+signal-type: ["trust-signal", "intent-integrity"]
+audience: ["analyst", "vp-marketing", "cxo"]
+status: "fixed"
+difficulty: "low"
+risk-severity: "medium"
