@@ -1,52 +1,85 @@
-# 🛰️ Signal Watch — Pre-RCA Intelligence
+# 🛰️ signal-watch — Early Signal Drift & RCA Candidates
 
-The `/signal-watch/` folder acts as a **staging zone** for signal-level anomalies that are detected but not yet validated into Root Cause Analysis (RCA) cases.
+This folder tracks **early-stage signal integrity issues** — before they graduate into full RCA loops.
 
-These are early indicators — symptoms that something may be wrong at the **consent**, **trust**, **attribution**, or **AI signal** level.
-
----
-
-## 🔍 Why This Exists
-
-Most broken signals are either:
-
-- ❌ Ignored as edge cases, or  
-- ❌ Patched without root-cause visibility  
-
-`/signal-watch/` prevents this by:
-
-- ✅ Logging anomalies before they get buried  
-- ✅ Providing structured folders by signal type  
-- ✅ Giving system teams early visibility before RCA confirmation  
+It serves as a **signal radar** for engineers, analysts, and system architects to monitor, prioritize, and escalate anomalies across **consent, cookie, network, and AI signal zones**.
 
 ---
 
-## 🗂️ Folder Structure
+## 🚧 What Qualifies as a Signal-Watch Item?
 
-| Folder               | What It Captures                                                |
-|----------------------|-----------------------------------------------------------------|
-| `consent-signal/`     | Invalid, missing, or misaligned consent signals                 |
-| `trust-signal/`       | Signals that affect user trust (e.g., dark patterns, trick UX)  |
-| `attribution-signal/` | Misattribution, missing referrers, "not set" or UTM corruption  |
-| `ai-signal/`          | Signals that can corrupt AI models or personalization layers    |
+- Breaks intent but hasn’t yet triggered a full investigation
+- Lacks stakeholder urgency but silently damages attribution or trust
+- Inconsistent or edge-case behavior observed in user journey, analytics, or tag flow
+- Emerging signal classes — including AI hallucinations, chat signal mismatches, or ID-sync failures
 
 ---
 
-## 🚦 When Does a Signal Get Promoted?
+## 🔍 Strategic Benefit
 
-A signal anomaly becomes a formal RCA-backed use case when it is:
+Having this layer helps teams:
 
-✅ Reproducible  
-✅ Mapped to a system/platform flaw  
-✅ Linked to measurable business or compliance risk  
-✅ Solvable through architecture, tag config, or GTM redesign  
+- Detect signal **drift** before total failure
+- Avoid repeating **low-context bug reporting**
+- Separate **false alarms** from real architectural leaks
+- Maintain a **repeatable RCA loop pipeline** without chaos
 
 ---
 
-## 🧠 Use This Folder To:
+## 🧭 Signal Categories
 
-- Build a proactive QA pipeline for signal health  
-- Spot patterns before they become failures  
-- Keep leadership aware of silent data leaks  
+| Signal Class     | Folder                     | Description |
+|------------------|----------------------------|-------------|
+| Consent Signal   | `consent-signal/`          | Triggered or blocked flows due to banner, toggle, or region logic |
+| Cookie Signal    | `cookie-signal/`           | Issues from sync gaps, mismatches, or cookie storage failure |
+| Trust Signal     | `trust-signal/`            | Misfired tags, accidental triggers, or breach of user intent |
+| Attribution ID   | `id-signal/`               | Broken tracking due to mismatched, missing, or recycled IDs |
+| AI Signal        | `ai-signal/`               | Drift in chatbot, recommender, or signal injection behavior |
+| QA & Predictive  | `qa-signal/`               | Breaks caught via debug mode or predictive mismatch patterns |
 
-> “Every critical RCA starts as a weak signal. This folder helps us listen early — and act intelligently.”
+---
+
+## ✅ Finalized RCA Use Cases
+
+These issues have now been upgraded to formal RCA loops under the `10-zeroleak/` vault:
+
+| RCA ID | Signal Class       | Title                                                                 |
+|--------|---------------------|------------------------------------------------------------------------|
+| RCA-01 | Trust Signal        | Tag Fired Before Form Submission — False Conversion Recorded          |
+| RCA-02 | Cookie Signal       | Redirect Blocked Cookie Sync — Attribution Loss                       |
+| RCA-03 | Trust Signal        | Tag Fired on Wrong Page — Intent Breakage                            |
+| RCA-04 | Trust Signal        | Pinterest Tag Fired — But No Signal Captured                         |
+| RCA-05 | ID Signal           | Same User, Different ID — Broken Journey Attribution                  |
+
+---
+
+## 🔭 In-Progress Observations (Signal-Watch Candidates)
+
+| Observation ID | Signal Class     | Description |
+|----------------|------------------|-------------|
+| SW-06          | Consent Signal   | Opt-out toggle delays blocking on Safari vs Chrome                 |
+| SW-07          | AI Signal        | Chatbot Hallucination from Malformed Input                         |
+| SW-08          | AI Signal        | Personalization Drift After Consent Change                         |
+| SW-09          | ID Signal        | Ads vs GA4 Attribution Using Different ID Systems                  |
+| SW-10          | Trust Signal     | GTM Debug Mode Left Enabled in Production                          |
+| SW-11          | Cookie Signal    | Subdomain Cookie Conflict — Purchase Not Mapped                    |
+| SW-12          | Attribution Gap  | Incorrect Currency Sent to Ads — Budget Misreporting               |
+| SW-13          | QA Signal        | GTM Container 404 on Blog Subdomain — Tags Missing                 |
+
+> These will be upgraded to RCA loops based on impact, reproducibility, and leadership value.
+
+---
+
+## 🧠 Who Should Use This Folder?
+
+- RCA Architects tracking evolving system fragility
+- Growth, Ads, or Analytics teams catching drop-offs without obvious bugs
+- AI and Privacy Signal Engineers preparing RCA-ready payloads
+- Directors, VPs, and Consultants reviewing system health with context
+
+---
+
+## 📌 Reminder
+
+Only **signal-aware minds** catch these before they explode.  
+Signal-watch is where **silent chaos gets scoped** — before it hurts brand, trust, or revenue.
