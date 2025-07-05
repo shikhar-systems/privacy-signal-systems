@@ -1,54 +1,55 @@
-# 🛡️ Trust Signal — Observation Zone
+# 🛡️ Trust Signal — Root Layer
 
-This folder contains verified observations where **digital trust, user consent, or intent fidelity** is silently compromised — often without triggering visible errors in analytics or platform logs.
+**Trust signals** represent the **invisible contracts** between systems and users — where user intent, tag behavior, and platform promises must stay aligned.
 
-These signals are undergoing deep investigation via the **ZeroLeak RCA™** framework. Once root causes are mapped and resolved, qualified cases are migrated to `/10-zero-leak/` as finalized RCA loops.
-
----
-
-## 🔍 Examples of Trust Signal Breakages
-
-- Tags firing on pages **before user interaction or consent**
-- PII unintentionally exposed in **URLs, headers, or payloads**
-- Consent banners present but **not technically enforced**
-- Pixels or trackers executing **without valid user permission**
-- Mismatched cookies or values leading to **trust-reporting gaps**
+This folder houses all finalized signal-level observations that impact user trust, system predictability, or perception of brand integrity.
 
 ---
 
-## 📁 Folder Contents
+## 🧠 Signal Definition
 
-This folder currently includes:
+A **trust signal** is broken when:
 
-- `README.md` — Overview and principles
-- In-progress Markdown cases under evaluation
-
-Each case is named using a clear convention based on **signal nature** and **issue type**.  
-Example file names:
-
-- `unintended-tag-fire-on-sensitive-page.md`
-- `pii-leakage-via-url-querystring.md`
+- A tag fires **too early or too late**, misaligning with user actions
+- Data collection violates **user expectation or context**
+- The system behaves inconsistently across journeys (A vs B user)
+- An analytics or marketing system **reports data that didn’t truly occur**
 
 ---
 
-## 🧠 Purpose of This Folder
+## 📁 What’s Inside
 
-- To **contain and classify high-trust-risk issues** prior to RCA conversion
-- To serve as a **sandbox for consent, intent, and data misuse evaluation**
-- To ensure systematic RCA handling for cases that affect **brand trust, compliance, or attribution**
+Each file here is a finalized, public signal-level observation that broke trust and required an RCA:
 
----
+| File | Description |
+|------|-------------|
+| `SW01-tag-fired-on-wrong-page.md` | A tag fired on a page **before user intent was confirmed** — breaking attribution and trust |
+| `SW02-pixel-blocked-due-to-unexpected-pii-disclosure.md` | A tag was blocked because it tried to send **PII without proper safeguards** |
 
-## ✅ ZeroLeak RCA™ Alignment
-
-All trust signals here are being:
-
-- ✅ Mapped against consent and signal intent flows
-- ✅ Diagnosed for architectural or logic-level flaws
-- ✅ Prioritized based on **user harm, business exposure, and CXO urgency**
-
-This ensures every trust-risk case is traceable, repairable, and aligned with ZeroLeak RCA™ principles.
+> 💡 Each observation is backed by a full RCA in the `10-zero-leak/` folder once confirmed and simulated.
 
 ---
 
-> For collaboration, escalation, or redacted case access, please connect via secure signal channels or raise a private issue request.
+## 🔄 Observation Lifecycle
+
+Signal observations evolve through these phases:
+
+1. `in-progress/` → Initial hypothesis or partial bug clue  
+2. `signal-watch/trust-signal/` → Finalized observation affecting trust  
+3. `10-zero-leak/` → Full RCA use case with architecture, logic, and resolution
+
+This layered approach keeps early-stage ideas and live RCA loops **cleanly separated**.
+
+---
+
+## 🔐 ZeroLeak RCA™ Compliance
+
+All signals here are part of the **ZeroLeak RCA™** methodology — ensuring:
+
+- Clear signal loss visibility  
+- Human + system-level impact analysis  
+- Traceable recovery recommendations  
+
+---
+
+© 2025 Shikhar. ZeroLeak RCA™ is a trademarked system. Unauthorized use, duplication, or redistribution is prohibited.
