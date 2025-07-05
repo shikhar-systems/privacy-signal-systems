@@ -1,5 +1,5 @@
 
-# 📘 glossary.md — ZeroLeak RCA™ Glossary
+# 📘 ZeroLeak RCA™ Glossary
 
 A shared vocabulary ensures precision when discussing complex signal systems.  
 This glossary defines key terms used across the ZeroLeak RCA™ framework and signal integrity investigations.
