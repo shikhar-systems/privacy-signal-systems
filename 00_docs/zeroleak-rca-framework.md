@@ -1,69 +1,71 @@
 # 🧠 ZeroLeak RCA™ Framework
 
-**ZeroLeak RCA™** is a system-level method to detect, trace, and resolve **silent signal failures** across digital environments — especially those involving **GTM 360, GA4 360, consent layers, and complex data workflows**.
-
-Where traditional debugging stops at broken tags, ZeroLeak RCA™ follows the **entire signal lifecycle** — from intent to delivery to data trust — and recovers what others miss.
+This document explains the **ZeroLeak RCA™** methodology — a system-resilient framework for tracing, understanding, and resolving digital signal failures across consent, cookies, tags, and network layers.
 
 ---
 
-## 🔍 Core Principles
+## 🔄 RCA Lifecycle Flow
 
-1. **System-First Thinking**  
-   RCA is not a bug fix — it’s an architecture alignment strategy. Every tag, cookie, and user signal is evaluated within system-wide flows.
-
-2. **Signal Integrity Over Tag Status**  
-   Just because a tag fired doesn’t mean the signal was valid. We trace what **actually reached the endpoint**, not what triggered.
-
-3. **Consent-Aware Signal Pathing**  
-   Respecting privacy means **understanding which signals were blocked, delayed, or downgraded** — and why.
-
-4. **From Leakage to Redesign**  
-   Every RCA concludes with a **signal recovery path** that prevents recurrence.
-
----
-
-## 🛠️ Tools & Methods Used
-
-- **GTM 360 + GA4 360** (web & roll-up properties)
-- **Consent Platforms** (OneTrust, CookieYes)
-- **Browser Debuggers** (Tag Assistant, dataLayer inspector, network console)
-- **Custom JS & Tracking Logic**
-- **Architecture Flow Diagrams** (Mermaid or Draw.io)
+```mermaid
+flowchart TD
+    A[User lands on site] --> B[Consent Banner Shown]
+    B -->|Accepts| C[Consent Captured in CMP - OneTrust or CookieYes]
+    C --> D[GTM Fires Tags Based on Consent]
+    D --> E[Signals Sent to GA4, Ads, Pixels]
+    E --> F[Data Logged in GA4 / BigQuery / CDPs]
+    F --> G[Signal Quality Evaluated]
+    G --> H[ZeroLeak RCA™ Detects Silent Failures]
+    H --> I[Recovery Pattern Matched & Applied]
+```
 
 ---
 
-## 📦 What Makes ZeroLeak Different?
+## 🔍 RCA Depth Flow (From User to Signal Recovery)
 
-| Traditional Debugging | ZeroLeak RCA™ |
-|------------------------|----------------|
-| “Why isn’t this tag firing?” | “Why did the signal fail across the system?” |
-| Checks tag and trigger | Follows full flow: user intent → browser event → tag logic → network call → endpoint |
-| Surface-level status | Deep root cause and redesign |
-| Performed ad-hoc | Documented, pattern-driven, and repeatable |
-
----
-
-## 🧠 Example Patterns Diagnosed
-
-- Tag fired **before user intent was complete**
-- Signals lost due to **delayed or blocked cookies**
-- Attribution broken by **mismatched user IDs across platforms**
-- DataLayer object pushed **after tag evaluated**
-- Consent logic failed to resolve before firing sequence
-
-> These patterns are tracked in `/patterns/` and reused across RCA vaults.
+```mermaid
+graph TD
+    A[User Action → Click/View/Submit]
+    B[Tag Triggered via GTM]
+    C[Consent & Cookie Check]
+    D[DataLayer Value Check]
+    E[Network Request Sent]
+    F[Data Captured in GA4 / Ads / CDP]
+    G[Signal Appears in Report?]
+    G -->|No| H[ZeroLeak RCA™ Triggered]
+    H --> I[Consent · Cookie · Tag · Network Diagnosis]
+    I --> J[Recovery Action Suggested or Implemented]
+    A --> B --> C --> D --> E --> F --> G
+```
 
 ---
 
-## ✅ Outcome
+## 🛠️ Why This Framework
 
-ZeroLeak RCA™ enables:
-
-- High-trust attribution systems
-- Privacy-compliant data pipelines
-- Executive visibility into invisible system leaks
-- Scalable RCA reuse across industries and tech stacks
+- Tags may fire, but **signals may silently drop** due to consent, cookie, or dataLayer gaps.
+- Traditional QA checks often **miss root-cause chains** behind broken journeys or misattributed conversions.
+- ZeroLeak RCA™ introduces a **multi-layered, system-first debugging model**.
 
 ---
 
-> “Fixing tags is easy. Fixing signal architecture is leadership.”
+## 💎 Key Features
+
+- Consent-respecting and signal-aware
+- Cross-layer (CMP → GTM → GA4 → BigQuery → Report)
+- Business-resonant RCA — connects tech to impact
+- Designed for analysts, engineers, and growth leaders
+- Pluggable into existing QA & audit ecosystems
+
+---
+
+## 📌 Outputs
+
+- Architecture Diagram (Mermaid → PNG)
+- Root Cause → Signal Path Mapping
+- Leadership RCA Summary
+- Monetization Risk View
+- Persona & Industry Impact Snapshot
+- Recovery Checklist & Verification Logic
+
+---
+
+> “We don’t debug tags. We repair truth.”
