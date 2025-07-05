@@ -10,6 +10,7 @@ It acts as both a **strategic briefing layer** and a **technical guide** — emp
 
 | File | Purpose |
 |------|---------|
+| `architecture_overview.md` | Blueprint of the Consent → Signal → RCA pipeline (with flow diagrams) |
 | `zeroleak-rca-framework.md` | The core RCA methodology — how ZeroLeak traces deep signal failures |
 | `signal-recovery-playbook.md` | Playbook for recovering signals from architectural blind spots |
 | `industry-impact-map.md` | Mapping RCA use cases to industry verticals for impact clarity |
@@ -21,24 +22,23 @@ It acts as both a **strategic briefing layer** and a **technical guide** — emp
 
 ## 🎯 Who Should Use This Folder
 
-- **System architects & signal designers** defining privacy and data workflows
-- **VPs, CxOs, and founders** aligning growth with attribution and trust integrity
-- **Product, marketing, and analytics leaders** looking to close invisible revenue holes
-- **Governance, compliance & legal teams** seeking traceable digital behavior logic
-- **Policy advisors & technocrats** building fairness and trust into infrastructure
+- **System architects & signal designers** defining privacy and data workflows  
+- **VPs, CxOs, and Founders** aligning growth with attribution and trust integrity  
+- **Product, marketing, and analytics leaders** closing invisible revenue holes  
+- **Governance, compliance & legal teams** seeking traceable digital behavior logic  
+- **Policy advisors & technocrats** building fairness and trust into infrastructure  
 
 ---
 
 ## 🔍 Why This Folder Matters
 
-- Every ZeroLeak RCA™ use case has **a root cause, a diagram, and a monetizable recovery**
-- Translates **technical leaks into business urgency**
-- Justifies **platform redesigns, product improvements, and signal strategy** across teams
+- Every **ZeroLeak RCA™** use case has a **root cause, a diagram, and a monetizable recovery**  
+- Translates **technical leaks into business urgency**  
+- Justifies **platform redesigns, product improvements**, and **signal strategy** across teams  
 
 ---
 
 ## 💡 Bonus Insight
 
-> “The most expensive leaks don’t show up in your error logs. They hide in your attribution, trust, and consent pipelines.”
-
----
+> “The most expensive leaks don’t show up in your error logs.  
+> They hide in your attribution, trust, and consent pipelines.”
