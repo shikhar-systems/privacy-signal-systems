@@ -1,59 +1,52 @@
-# 👁️ signal-watch/ — Observation Staging Zone
+# 🛰️ Signal-Watch
 
-This folder tracks **early-stage signal breakages** before they graduate into full ZeroLeak RCA™ loops.
+`signal-watch/` is the active staging ground for signals that **haven’t yet completed RCA** but show clear signs of architectural, behavioral, or consent-related issues.
 
-> Think of this as the **observation radar** — where weak signals, suspicious behaviors, or partial failures are captured, logged, and mapped to potential root causes.
-
----
-
-## 🧠 Why This Folder Exists
-
-Many of the **costliest digital leaks** begin as subtle breaks —  
-- A tag firing too early  
-- A signal missing in only some browsers  
-- A consent toggle breaking attribution silently  
-
-These issues often get dismissed or overlooked.  
-Here, we treat them as **pre-RCA seeds** — potential high-value breakdowns in trust, attribution, or signal logic.
+This system is used to **capture, categorize, and evaluate** these weak signals — before they escalate into silent monetary leaks or trust failures.
 
 ---
 
-## 🔁 Observation Lifecycle
+## 🧠 Observation Lifecycle
 
-| Stage | Folder | Description |
-|-------|--------|-------------|
-| 📍 In Progress | `in-progress/` | Loose or raw observations where the signal class is not yet clear. Used for logging real bugs, hypotheses, or monitoring leads that may become valid RCA. |
-| 🧭 Signal Classification | `trust-signal/`, `ai-signal/`, etc. | Observation has been validated and signal category confirmed (e.g., trust breach, AI drift, attribution loss). RCA logic is still being built or queued. |
-| 🧪 Final RCA | `10-zero-leak/` | Fully dissected RCA with monetizable impact, diagrams, and architectural solution. Promoted from signal-watch into GitHub Vault or RCA library. |
+Each signal observed follows this lifecycle:
 
-Each RCA begins with **early sensing**, then matures across this pipeline.
+```
+Observed → Staged in Signal-Watch → RCA Confirmed → Promoted to /use-cases/
+```
 
----
-
-## 📂 Current Signal Categories
-
-| Folder | Signal Type |
-|--------|-------------|
-| `trust-signal/` | Breaks in intent, tag firing order, or misaligned user trust flows |
-| `ai-signal/` | Signal drift, hallucination, or broken handoff in AI systems |
-| `attribution-signal/` | Broken marketing + analytics journeys due to ID mismatch, wrong UTM, etc. |
-| `in-progress/` | Initial observations, awaiting deeper classification |
+Signals that do **not** meet RCA criteria may still be retained here for future reference, especially if related signals emerge later.
 
 ---
 
-## 🚫 What You Won’t See Here (By Design)
+## 🧩 ZeroLeak RCA™ Compliance
 
-- No **full RCA logic or diagrams**  
-- No **proprietary architecture fixes**  
-- No **client-specific identifiers or screenshots**
-
-This zone is safe to share, track, and showcase — without exposing your deeper IP or RCA insights.
+Only signals aligned with ZeroLeak RCA™ standards are tracked here.  
+This means each observation must meet **minimum traceability and integrity checks** — even if the full RCA has not been performed yet.
 
 ---
 
-## 📬 Want to Collaborate?
+## 📁 Folder Structure
 
-If you're a tech lead, CMO, or product architect seeing similar signal loss —  
-📩 Reach out to co-map these issues or explore joint RCA loops.
+Each subfolder under `signal-watch/` represents a **signal class**.
 
-> “Every RCA begins as a signal whisper. This is where we listen.”
+Example categories:
+
+- `trust-signal/` — trust erosion, misfiring pixels, misaligned intent  
+- `ai-signal/` — chatbot failures, AI hallucinations, personalization drift  
+- `attribution-signal/` — journey stitching issues, user ID mismatches  
+- `consent-signal/` — signals blocked or delayed due to consent settings  
+- `data-signal/` — invalid parameter values, incorrect payloads  
+- `in-progress/` — early-stage signals being evaluated  
+
+> 🛠️ More folders may be added over time as RCA types evolve.
+
+---
+
+## 📬 Collaboration & Contributions
+
+If you’ve observed a weak signal worth staging, please raise an issue or submit a PR.  
+This folder is designed to **grow with real-world complexity** — and feedback is always welcome.
+
+---
+
+© 2025 Shikhar. ZeroLeak RCA™ is a trademarked system. Unauthorized use, duplication, or redistribution is prohibited.
