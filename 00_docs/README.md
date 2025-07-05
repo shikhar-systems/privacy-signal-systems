@@ -10,20 +10,22 @@ It serves as both a **strategic briefing layer** and a **technical guide** — e
 
 | File | Purpose |
 |------|---------|
-| `architecture_overview.md` | Blueprint of the Consent → Signal → RCA pipeline (with flow diagrams) |
-| `audience_targets.md` | Profiles of intended beneficiaries: executive, data, product, governance roles |
-| `industry_impact_matrix.md` | Mapping of RCA use cases to industry verticals for impact clarity |
-| `monetizable_leaks.md` | ₹ / $ losses plugged or prevented via RCA — builds business case and urgency |
-| `system_execution_plan.md` | End-to-end RCA system rollout view — modular, repeatable, leadership-ready |
+| `zeroleak-flow.md` | Blueprint of the Consent → Signal → RCA pipeline (with flow diagrams) |
+| `signal-dissection-rca.md` | How ZeroLeak RCA™ investigates stack-level failures across signals, tags, cookies |
+| `signal-recovery-playbook.md` | Recovery map: How to rebuild trust and attribution after a broken signal trail |
+| `industry-impact-map.md` | Mapping of RCA use cases to industry verticals for impact clarity |
+| `persona-map.md` | Profiles of intended beneficiaries: executive, data, product, governance roles |
+| `glossary.md` | System-native terms, signals, and technical language used across RCAs |
+| `RCA-roi-logic.md` | ₹ / $ losses plugged or prevented via RCA — builds business case and urgency |
 
 ---
 
 ## 🎯 Who Should Use This Folder
 
-- **System architects & signal designers** defining privacy and data collection workflows
-- **CxOs, Chiefs of Staff & Founders** preparing to pitch, audit, or rewire platforms
-- **Governance, compliance & legal leaders** seeking traceable, justified digital behavior
-- **Policy advisors and reform-minded technocrats** systematizing trust and digital fairness
+- **System architects & signal designers** defining privacy and data collection workflows  
+- **CxOs, VPs, Chiefs of Staff & Founders** preparing to pitch, audit, or rewire broken signal stacks  
+- **Governance, compliance & legal leaders** seeking traceable, justified digital behavior  
+- **Policy advisors and AI product builders** systematizing trust, attribution, and platform fairness  
 
 ---
 
@@ -37,6 +39,5 @@ It serves as both a **strategic briefing layer** and a **technical guide** — e
 
 ## 🧠 Bonus Tip
 
-This folder is more than documentation — it’s a **decision layer**.  
-Use these insights in boardrooms, public audits, policy think tanks, or platform review decks.  
-They translate technical signals into **actionable system narratives** — with impact.
+When decision-makers can *see the invisible leaks*, they stop approving surface fixes — and start funding system redesigns.  
+This folder gives them the language and lens to lead that shift.
