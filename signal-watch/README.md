@@ -22,11 +22,11 @@ Here, we treat them as **pre-RCA seeds** — potential high-value breakdowns in 
 
 | Stage | Folder | Description |
 |-------|--------|-------------|
-| 📍 `in-progress/` | Early leads or half-mapped bugs — no confirmed signal class yet |
-| 🧭 `trust-signal/`, `ai-signal/`, etc. | Confirmed signal-type but RCA not fully developed |
-| 🧪 `10-zero-leak/` | Full RCA with diagrams, impact, and recovery logic |
+| 📍 In Progress | `in-progress/` | Loose or raw observations where the signal class is not yet clear. Used for logging real bugs, hypotheses, or monitoring leads that may become valid RCA. |
+| 🧭 Signal Classification | `trust-signal/`, `ai-signal/`, etc. | Observation has been validated and signal category confirmed (e.g., trust breach, AI drift, attribution loss). RCA logic is still being built or queued. |
+| 🧪 Final RCA | `10-zero-leak/` | Fully dissected RCA with monetizable impact, diagrams, and architectural solution. Promoted from signal-watch into GitHub Vault or RCA library. |
 
-You’ll see each observation **move across these folders** as clarity deepens.
+Each RCA begins with **early sensing**, then matures across this pipeline.
 
 ---
 
