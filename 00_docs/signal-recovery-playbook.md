@@ -1,71 +1,64 @@
-# ♻️ Signal Recovery Playbook
+# 🔄 Signal Recovery Playbook — ZeroLeak RCA™
 
-This playbook outlines **how to rebuild broken signal journeys** once root cause is identified using ZeroLeak RCA™.
-
-Unlike traditional fixes that patch a tag or tweak a trigger, this recovery process focuses on **system-level repair** — ensuring the **next signal doesn’t just fire, it flows with integrity**.
-
----
-
-## 🧭 Recovery Strategy Overview
-
-Every signal recovery involves three phases:
-
-1. **Root Clarity**  
-   Map the exact failure: where the signal dropped, why, and under what system conditions.
-
-2. **Trustful Redesign**  
-   Modify tag logic, dataLayer behavior, sequencing, or consent integration to prevent recurrence.
-
-3. **Replay + Confirm**  
-   Use simulated flows to re-trigger the journey and **validate end-to-end signal delivery**.
+A tactical playbook for recovering signal integrity across GTM, GA4, and consent-driven environments.  
+Built on real-world RCA loops, this guide walks teams through identifying, diagnosing, and recovering from signal losses that traditional QA misses.
 
 ---
 
-## 🔄 Key Recovery Techniques
+## 🧭 Why This Playbook Matters
 
-| Technique | When to Use |
-|----------|-------------|
-| `Trigger sequence delay` | When tags fire before required dataLayer push |
-| `Consent check listener` | When consent wasn’t resolved before tag load |
-| `Cookie readiness guard` | When signals rely on third-party cookies |
-| `Redundant endpoint fallbacks` | For ad blockers or redirect-based failures |
-| `Custom signal attribution bridge` | For identity split across GA4/Ads/Facebook |
+In privacy-constrained, multi-vendor stacks, signals drop silently — costing attribution accuracy, remarketing performance, and business trust.
+
+This playbook provides **actionable logic and recovery steps**, not generic advice.
 
 ---
 
-## 🧰 Tools Used
+## 🧩 Core Recovery Scenarios
 
-- **Browser DevTools** (console, network, cookies)
-- **Tag debuggers** (Google Tag Assistant, DataLayer Inspector+)
-- **Consent scanners** (OneTrust Debugger, CookieYes Preview)
-- **Custom scripts** (to simulate delayed or failed conditions)
-
----
-
-## 📉 Before Recovery (Common Symptoms)
-
-- Tag fired, but **no network call visible**
-- Network call fired, but **no conversion in vendor dashboard**
-- GA4 shows event, but **Ads or Meta doesn’t**
-- Signal blocked in **Safari or Brave** but not Chrome
-- Metrics inconsistent across tools (GA4, CRM, Ads)
+| Scenario | RCA Recovery Insight |
+|----------|----------------------|
+| Tag fired before consent | Delay tag or use Consent Mode triggers (e.g., `ad_storage`) |
+| Cookie mismatch on subdomains | Sync client ID via linker config or use a shared domain cookie strategy |
+| DataLayer event missing value | Redesign push logic with validation; fallbacks or defaults |
+| Wrong trigger on thank-you page | Restrict by formSubmit or pagePath+referrer logic |
+| Pixel fires but captures empty data | Validate payload structure; check attribute bindings |
+| Ads vs GA4 mismatch | Audit `send_to` values; unify conversion tracking configuration |
 
 ---
 
-## ✅ After Recovery (What Success Looks Like)
+## 🛠️ Tools to Apply Fixes
 
-- Signal fires **only after consent is granted and cookies are ready**
-- Network payloads carry **complete, valid data**
-- Attribution IDs match across systems
-- Vendor dashboards show **synced events**
-- CXOs and Product Leads gain **visibility and trust** in data
-
----
-
-> “We don’t fix signals just to report.  
-> We recover them to restore system truth.”
+- **GTM Preview + Debug Mode** — Validate tag sequencing and trigger paths
+- **Chrome DevTools: Network tab** — Inspect pixel payloads, request headers
+- **Consent platform logs (e.g., OneTrust)** — Confirm status and triggers
+- **Real-time GA4 reports** — Observe live hits, dimensions, mismatches
+- **GTM/GA4 JS Recipes** — For conditional tagging, cookie reading, fallback logic
 
 ---
 
-📎 All reusable logic templates can be found in: `/patterns/`  
-📂 Real-world examples implemented inside: `/10-zero-leak/`
+## 🧠 Recovery Mindset
+
+- RCA is **not bug fixing** — it’s **system clarity restoration**
+- Recoveries must be **predictable**, **auditable**, and **non-intrusive**
+- Each recovery should be paired with a **diagram and before-after signal map**
+
+---
+
+## 📌 Diagram: RCA to Recovery
+
+```mermaid
+graph TD
+    A[Signal Failure Detected] --> B[ZeroLeak RCA™ Triggered]
+    B --> C[Root Cause Isolated]
+    C --> D[Recovery Pattern Matched]
+    D --> E[Fix Implemented]
+    E --> F[Signal Verified in Reporting]
+```
+
+---
+
+## ✅ Final Notes
+
+This playbook grows with each RCA loop. Every new recovery strengthens the signal spine of your stack.
+
+> “The best signal systems don’t just detect — they recover intelligently.”
