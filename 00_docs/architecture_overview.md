@@ -1,90 +1,88 @@
-# 🧠 Architecture Overview
+# 🧭 Architecture Overview — ZeroLeak RCA™
 
-This document outlines the core architecture behind **Privacy Signal Systems** — mapping the journey from user action to RCA-backed resolution.
-
-It serves both as a **design reference** and a **strategic explainer** for decision-makers, system architects, compliance teams, and platform owners who need resilient signal flows built on privacy-first foundations.
+> A high-level walkthrough of how signals flow — and silently fail — in real-world systems, and how ZeroLeak RCA™ detects and recovers them.
 
 ---
 
-## 🔄 Consent → Signal → RCA: The Trust Pipeline
+## 🎯 CXO Summary
 
-[User Action]
-     │
-     ▼
-[Consent Layer]      -->  (UX, Privacy UI: banners, toggles)
-     │
-     ▼
-[Signal Layer]       -->  (Tags, Pixels, JS execution)
-     │
-     ▼
-[RCA Layer]          -->  (System Mapping, Use Case Library)
+In today’s signal economy, every click, view, and submit triggers a cascade of logic across consent tools, tag managers, cookies, and analytics systems. When this logic fails silently — due to misfired tags, blocked scripts, or missing user IDs — it breaks attribution, erodes trust, and loses revenue.
+
+ZeroLeak RCA™ brings **real-time traceability** and **root cause intelligence** to this invisible battlefield.
 
 ---
 
-## 🧩 Layer-wise Breakdown
+## 🔄 ZeroLeak RCA™ Flow: Consent to RCA
 
-### 1. Consent Layer
-The entry point of trust. Captures user preferences and legal basis for tracking.
-
-- Tools: OneTrust, TrustArc, Sourcepoint, in-house CMPs
-- Interfaces: banners, toggles, pre-checks, granular opt-ins
-- Logs include: region, timestamp, browser, legal basis
-- Common errors: incorrect default states, broken logs, misaligned categories
-
----
-
-### 2. Signal Layer
-Where user interactions translate to events and data flows.
-
-- Tools: GTM, GA4, Meta Pixel, LinkedIn Insight Tag, Segment
-- Signal types: pageviews, clicks, conversions, attribution chains
-- Common failures:
-  - Overfire (duplicates)
-  - Underfire (blocked/missing)
-  - Orphaned signals (firing without consent)
-  - Misclassification (wrong event parameters)
+```mermaid
+flowchart TD
+    A[User lands on site] --> B[Consent Banner Displayed]
+    B -->|Accepts| C[Consent Captured in CMP such as OneTrust]
+    C --> D[Tags Fired via GTM/GTM 360]
+    D --> E[Signal Sent to GA4, Ads, Pixels]
+    E --> F[Data Enters Reporting Layer: GA4, BQ, CDP]
+    F --> G[Signal Quality Evaluated]
+    G --> H[ZeroLeak RCA™ Detects Failure or Success]
+    H --> I[Signal Recovery Initiated if Needed]
+```
 
 ---
 
-### 3. RCA Layer
-The diagnosis and fix zone — issues here are transformed into system-level use cases.
+## 🔍 Signal RCA Trigger Flow (Failure Detected)
 
-- Uses RCA templates to document:
-  - Root cause (system, compliance, infra)
-  - Impact (data loss, business leakage, policy risk)
-  - Fix logic (tech + policy + platform alignment)
-- Outputs are added to the `use-cases/` folder with complete resolution flow and diagrams
+```mermaid
+graph TD
+    A[User Action: Click, View, Submit]
+    B[Tag Trigger in GTM]
+    C[Cookie & Consent Check]
+    D[DataLayer Integrity Check]
+    E[Network Request Fired]
+    F[Analytics Logging: GA4, Ads, etc.]
+    G[Signal Visible in Report?]
+    H[ZeroLeak RCA™ Triggered]
+    I[Root Cause Mapping: Consent · Cookie · Tag · Network]
+    J[Recovery Pattern Suggested]
+
+    A --> B --> C --> D --> E --> F --> G
+    G -->|No| H --> I --> J
+```
+
+---
+
+## 🧱 Layer Mapping
+
+| Stage | Layer |
+|-------|-------|
+| Consent Banner | UX / Browser |
+| CMP + Consent Mode | Compliance Layer |
+| GTM + Tags | Signal Execution Layer |
+| Network + Cookies | Transport Layer |
+| GA4 + CDP | Analytics Layer |
+| RCA System | Intelligence & Recovery |
 
 ---
 
 ## 🧠 Why This Matters
 
-This layered architecture enables:
-
-- **Clarity** — all signals must trace back to a consent origin
-- **Resilience** — system fixes are scalable, not patchwork
-- **Accountability** — audit-ready, business-aligned RCA reports
-- **Trust** — user data is treated with fairness and transparency
+- Shows **where** signals break and **why**
+- Helps **CxOs** map signal failures to lost revenue
+- Equips **architects** to build leak-proof systems
+- Turns debugging into **strategic system design**
 
 ---
 
-## ✅ Sample Use Case Flow
+## 💡 Bonus Insight
 
-Imagine a "form_submit" event firing even when the user opted out.
-
-- Consent Layer: logs a "declined" preference
-- Signal Layer: Meta Pixel still fires
-- RCA Layer: reveals GTM misconfiguration ignoring consent check
-- Resolution: update trigger logic + log RCA in GitHub + notify stakeholders
+“The most expensive leaks don’t show up in your error logs.  
+They hide in your attribution, trust, and consent pipelines.”
 
 ---
 
-## 📌 How to Use This File
+## 📁 Location
 
-- Share with stakeholders to explain **why** signal failures happen
-- Use as a **template** for building your platform's consent → signal → RCA flow
-- Map your team’s tools and flows to this structure to identify weak links
+This architecture is visualized as both live Mermaid code (above) and downloadable PNGs inside:
 
----
+`/visuals/architecture/`
 
-> “We don’t chase bugs. We outgrow them — with systems that understand trust.”
+For diagram variants, check:  
+`/use-cases/10-zero-leak/RCA-01/visuals/`
