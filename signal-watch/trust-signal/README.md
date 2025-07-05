@@ -1,35 +1,54 @@
-# 🔒 Trust Signal
+# 🛡️ Trust Signal — Observation Zone
 
-This folder captures issues that **erode user trust** — even when tracking may be technically compliant.
+This folder contains verified observations where **digital trust, user consent, or intent fidelity** is silently compromised — often without triggering visible errors in analytics or platform logs.
 
-These are silent fractures in the platform’s moral architecture, where user perception diverges from system logic.
-
----
-
-## 🚨 Examples of Trust Signal Issues
-
-- Tracking on login, payment, or form pages without clarity
-- Opt-out experiences that are buried, inconsistent, or non-sticky
-- Data collection on sensitive journeys (e.g., healthcare, minors)
-- Reactivation of trackers after user explicitly opted out
+These signals are undergoing deep investigation via the **ZeroLeak RCA™** framework. Once root causes are mapped and resolved, qualified cases are migrated to `/10-zero-leak/` as finalized RCA loops.
 
 ---
 
-## 🔍 Why It Matters
+## 🔍 Examples of Trust Signal Breakages
 
-- Erodes **platform credibility**, even when legally compliant
-- Breeds perception of **dark patterns** and manipulative UX
-- Triggers **PR blowouts, regulator attention**, and user revolt
-- Breaks trust for high-sensitivity verticals like gov, health, finance
-
----
-
-## 🎯 Strategic Lens
-
-- These issues rarely get flagged in QA or compliance audits
-- They are noticed by the **most important users** — activists, journalists, regulators, and CxOs
-- Fixing them often requires **architectural clarity, not just legal checklists**
+- Tags firing on pages **before user interaction or consent**
+- PII unintentionally exposed in **URLs, headers, or payloads**
+- Consent banners present but **not technically enforced**
+- Pixels or trackers executing **without valid user permission**
+- Mismatched cookies or values leading to **trust-reporting gaps**
 
 ---
 
-> “Trust isn’t just a compliance checkbox — it’s a system-wide experience. And it fails quietly, at the edges.”
+## 📁 Folder Contents
+
+This folder currently includes:
+
+- `README.md` — Overview and principles
+- In-progress Markdown cases under evaluation
+
+Each case is named using a clear convention based on **signal nature** and **issue type**.  
+Example file names:
+
+- `unintended-tag-fire-on-sensitive-page.md`
+- `pii-leakage-via-url-querystring.md`
+
+---
+
+## 🧠 Purpose of This Folder
+
+- To **contain and classify high-trust-risk issues** prior to RCA conversion
+- To serve as a **sandbox for consent, intent, and data misuse evaluation**
+- To ensure systematic RCA handling for cases that affect **brand trust, compliance, or attribution**
+
+---
+
+## ✅ ZeroLeak RCA™ Alignment
+
+All trust signals here are being:
+
+- ✅ Mapped against consent and signal intent flows
+- ✅ Diagnosed for architectural or logic-level flaws
+- ✅ Prioritized based on **user harm, business exposure, and CXO urgency**
+
+This ensures every trust-risk case is traceable, repairable, and aligned with ZeroLeak RCA™ principles.
+
+---
+
+> For collaboration, escalation, or redacted case access, please connect via secure signal channels or raise a private issue request.
