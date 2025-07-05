@@ -1,66 +1,66 @@
 # 🔐 Privacy Signal Systems
 
-**A system-first architecture for digital trust, signal resilience, and RCA intelligence.**
+**A system-first architecture for digital trust, signal resilience, and ZeroLeak RCA™ intelligence.**
 
 ---
 
 ## 🚀 Vision
 
-In an era where consent, integrity, and intelligence define system credibility, this repository delivers a **modular RCA-driven framework** to resolve signal failures across digital environments.
+In an era where **consent, precision, and attribution integrity** define digital success, this system delivers a modular RCA-driven approach to:
 
-We go beyond debugging — we build signal frameworks that harden trust at the architecture level.
+- Detect invisible signal failures  
+- Recover broken attribution paths  
+- Build resilient tracking architectures
+
+We don’t just debug — we design RCA systems that *harden digital trust at the architecture layer*.
 
 ---
 
-## 🎯 Strategic Audiences
+## 🎯 Who This Is For
 
-This system is designed for:
-
-- 🧑‍💼 **Executive stakeholders** — navigating compliance, data trust, and signal governance
-- 👩‍💻 **Technical and data leaders** — who architect journeys across marketing, analytics, and privacy domains
-- 🏛️ **System-first institutions** — building intelligent platforms where every signal reflects intent and integrity
+- 🧑‍💼 **CxOs, VPs & Growth Leaders** — uncover silent data leaks and misattributions  
+- 👩‍💻 **Privacy Engineers & Analytics Architects** — dissect cookie, tag, and consent failures  
+- 🏛️ **Enterprise platforms** — building next-gen systems where every signal is traceable and governed
 
 ---
 
 ## 🧠 What’s Inside
 
-| Folder | Description |
-|--------|-------------|
-| `00_docs/` | System intelligence — architecture, industry mapping, RCA ROI, and execution blueprints |
-| `signal-watch/` | Staging ground for pre-RCA issues, organized by signal type |
-| `use-cases/` | Fully mapped RCA loops, categorized by industry impact |
-| `LICENSE.md` | Usage rights and contribution terms |
+| Folder | Purpose |
+|--------|---------|
+| `00-docs/` | RCA frameworks, strategic guides, industry mapping, glossary |
+| `01-signal-watch/` | Staging ground for weak signals and potential RCA candidates |
+| `10-zero-leak/` | Live RCA loops (ZeroLeak RCA™) with full architecture + recovery |
+| `visuals/` | Diagrams and architecture visuals used across RCA documentation |
+| `LICENSE.md` | Rights and terms for reuse, forks, and contributions |
 
 ---
 
-## 💎 RCA Power
+## 💡 What Makes This System Unique?
 
-Every confirmed issue in this system is mapped through a **Root Cause Analysis (RCA)** process — ensuring resolution at the architecture and trust layers.
+✅ **ZeroLeak RCA™** — a rare framework to isolate root signal issues across the stack  
+✅ **Live RCA from real environments** (not dummy bugs)  
+✅ **Visual-first** root cause breakdowns with business impact mapping  
+✅ **Cross-layer recovery logic** spanning tags, cookies, consent, and IDs
 
-Each RCA loop includes:
-
-- 📉 Monetary leakage & data loss quantification
-- 🏭 Industry and persona-level impact mapping
-- 🔁 Signal redesign logic and architecture
-- 🧠 System diagrams and RCA intelligence
-- ✅ Tier classification (e.g. High Impact, Private, CXO-Only)
-
-> “We don’t chase bugs. We outgrow them with signal-aware systems.”
+> “Where others see noise, we trace the signal.”
 
 ---
 
 ## 🔐 Public vs Private RCA Use Cases
 
-This repository includes **select public RCA use cases** that are anonymized and open-sourced for educational and strategic exploration.
+Some RCAs in this system are public. Others remain private due to:
 
-> 🚫 Some RCA loops remain **private or redacted** due to NDAs, client sensitivity, or strategic depth.  
-> ✅ All active cases are tracked internally via `PulseGrid` execution structure.
-
-To explore partnership-level insights or full RCA visibility, please connect securely.
+- NDA and sensitivity  
+- Monetization potential  
+- Leadership-level relevance only
 
 ---
 
-## 📬 Contact or Collaborate
+## 📬 Collaborate or Explore
 
-This project is maintained by architects of privacy-first, AI-aligned signal systems.  
-To contribute or collaborate, explore the public RCA loops under `use-cases/`, or raise a secure issue for invite-only access.
+To explore the RCA system or contribute new signal failures:
+
+- Review the RCA Manifest below  
+- Visit `10-zero-leak/` for live RCA use cases  
+- Open a secure issue for deeper access
