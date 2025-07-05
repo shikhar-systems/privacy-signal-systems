@@ -1,30 +1,29 @@
-# 📚 GLOSSARY — Signal Systems & RCA Terminology
+# 🧾 Glossary — ZeroLeak RCA™
 
-This glossary supports strategic clarity for all collaborators — from product and compliance to engineering and data science. These terms appear across the RCA library, `signal-watch/` folders, and system-level diagnostics.
+This glossary defines key terms used across the **ZeroLeak RCA™** framework, GitHub documentation, and Root Cause Analysis (RCA) flows.
 
----
-
-## 🔁 Signal System Terms
-
-| Term              | Definition                                                                 |
-|-------------------|---------------------------------------------------------------------------|
-| **Signal**        | Any user, device, or platform behavior converted into a data point — e.g., click, view, opt-in, conversion. |
-| **Broken Signal** | A signal that is delayed, suppressed, overwritten, or misclassified — often silently. |
-| **Consent Signal**| The metadata emitted by CMPs (Consent Management Platforms) to reflect user privacy choices — can be delayed or contextually invalid. |
-| **Trust Signal**  | A platform action that users interpret as fair, private, and expected — even if technically compliant, misalignment can break trust. |
-| **Attribution Signal** | Data points used to track where a user came from — source, medium, campaign, etc. Loss or distortion of these disrupts ROI visibility. |
+It ensures clarity for readers from cross-functional backgrounds — executives, product owners, analysts, engineers, and compliance teams.
 
 ---
 
-## ⚙️ RCA-Specific Terms
+## 📚 Key Terms
 
-| Term               | Definition                                                                 |
-|--------------------|----------------------------------------------------------------------------|
-| **RCA (Root Cause Analysis)** | The process of isolating systemic failures causing data loss, platform bugs, or legal risk — with reproducible findings. |
-| **RCA Promotion**  | When a signal anomaly is validated, mapped to impact, and elevated into a full RCA use case. |
-| **Silent Failure** | A bug or misfire that doesn’t produce console errors or alerts — but damages data quality or business insight. |
-| **System-linked Issue** | A problem that originates from architecture or logic layers — not just UI or implementation. |
+| Term | Definition |
+|------|------------|
+| **ZeroLeak RCA™** | A privacy-first, real-world Root Cause Analysis system that dissects silent signal failures across digital stacks. |
+| **Signal** | A unit of traceable digital behavior (clicks, form submits, purchases, etc.) collected for analytics, marketing, or compliance. |
+| **Signal Leak** | A loss, delay, or distortion in expected signal flow due to consent, cookie, tag, or code issues. Often invisible in dashboards. |
+| **Consent Mode** | A system (e.g., OneTrust, CookieYes) that governs data collection based on user consent — blocking or enabling tracking behavior. |
+| **Tag Misfire** | When a tag (e.g., Google Ads, Meta Pixel) fires at the wrong time, on the wrong page, or with wrong data — creating attribution gaps. |
+| **Attribution Mismatch** | When signal flow breaks between systems (Ads ↔ Analytics ↔ CRM), resulting in fragmented user journeys and unreliable metrics. |
+| **RCA Loop** | A single, closed diagnostic and resolution cycle for a signal failure — including bug, impact, fix, and documentation. |
+| **Architecture-Level Failure** | A signal issue caused not by isolated bugs, but by gaps in cross-stack design (e.g., misaligned dataLayer, redirect logic, or multi-tag conflicts). |
+| **System-First Thinking** | Approach where RCA is not just about debugging, but diagnosing systemic flaws and realigning trust infrastructure. |
+| **PulseGrid** | Internal RCA execution tracker (used privately for prioritization, tracking, visibility). |
 
 ---
 
-> “A system-first thinker doesn’t chase errors — they follow broken signals to root truths.”
+## 🧠 Bonus Insight
+
+The language of RCA is evolving — this glossary reflects the *ZeroLeak* shift from surface bugs to **invisible architectural trust failures**.
+
